@@ -2,12 +2,11 @@
 <html class="no-js" lang="zh-CN">
 
 <head>
-        <link rel="canonical" href="https://vergegithub.github.io" />
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-23077.htm" />
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>2024-11归档 - Verge Github免费机场订阅节点官网</title>
-        <meta name="keywords" content="2024-11归档" />
-        <meta name="description" content="2024-11归档" />
+    <title>判断数A中是否存在一棵同构于B的子树</title>
+        <meta name="description" content="树的同构：我理解的同构应该是树若干个结点平行交换形成与原树结构相同的树。但看到网上的一些实现都是认为树的同构必须是树的先序遍历是相同的。先贴上自己的代码。 /* struct TreeNode { &" />
         <link rel="icon" href="__ADDON__/img/vergegithub/favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css here -->
@@ -37,7 +36,7 @@
      crossorigin="anonymous"></script>
 </head>
 
-<body data-page="category">
+<body data-page="detail">
         <!-- preloaders start -->
     <div class="preloader">
         <div class="spinner">
@@ -95,10 +94,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>2024-11 归档</h1>
+                        <h1>判断数A中是否存在一棵同构于B的子树</h1>
                         <ul class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
-                            <li class="breadcrumb-item active">2024-11 归档</li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
                         </ul>
                     </div>
                 </div>
@@ -110,40 +110,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                        <div class="xcblog-blog-list">
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-04">
-                                <div class="col-md-3">
-                                    <div class="about-img">
-                                        <a href="/free-nodes/2024-11-4-free-node-subscribe.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20241103/bbd9422a572f6324f90438f42a8fd144.webp" alt="Verge Github节点订阅每天更新19M/S免费节点订阅链接">
-                                        </a>
+                                          				  				  				<div id="content_views" class="htmledit_views"> <p><span style="font-size:18px">树的同构：我理解的同构应该是树若干个结点平行交换形成与原树结构相同的树。但看到网上的一些实现都是认为树的同构必须是树的先序遍历是相同的。先贴上自己的代码。</span></p> <pre><code class="language-cpp">/* struct TreeNode { &nbsp;&nbsp;&nbsp;&nbsp;int val; &nbsp;&nbsp;&nbsp;&nbsp;struct TreeNode *left; &nbsp;&nbsp;&nbsp;&nbsp;struct TreeNode *right; &nbsp;&nbsp;&nbsp;&nbsp;TreeNode(int x) : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val(x), left(NULL), right(NULL) { &nbsp;&nbsp;&nbsp;&nbsp;} };*/ &nbsp; class IdenticalTree { public: &nbsp;&nbsp;&nbsp;&nbsp;bool chkIdentical(TreeNode* A, TreeNode* B) { &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// write code here &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(A==NULL||B==NULL) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string s1; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string s2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s1=toTranslate(A); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s2=toTranslate(B); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(string::npos!=s1.find(s2))return true; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return false; &nbsp;&nbsp;&nbsp;&nbsp;} &nbsp;&nbsp;&nbsp;&nbsp;string toTranslate(TreeNode *A) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(A==NULL)return "#!"; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string s; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s=to_string(A-&gt;val)+"!"; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s+=toTranslate(A-&gt;left); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s+=toTranslate(A-&gt;right); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return s; &nbsp;&nbsp;&nbsp;&nbsp;} };</code></pre> <pre><code class="language-cpp">bool chkIdentical(TreeNode* A, TreeNode* B)</code></pre> <p>上面的函数就是比较A中是否存在一棵同构于B的子树。其实程序的结构为：对A、B分别进行先序遍历，求得其先序遍历序列。然后利用string类型的find()函数查找s1序列中是否囊括s2序列，由此判断出<span style="font-size:18px">A中是否存在一棵同构于B的子树。记录一下几个知识点：</span></p> <p><span style="font-size:18px">先序遍历：即某节点----&gt;左子树-----&gt;右子树。采用递归来遍历输出先序序列。</span></p> <p><span style="font-size:18px">string.find()函数：</span></p> <p><span style="font-size:18px"></span></p> <div style="margin:0px; padding:0px; color:rgb(54,46,43); font-family:Arial; font-size:14px; line-height:26px">   string中 find()的应用&nbsp; （<span style="margin:0px; padding:0px; color:rgb(255,0,0)">rfind()</span>&nbsp;类似，只是从反向查找）</div> <div style="margin:0px; padding:0px; color:rgb(54,46,43); font-family:Arial; font-size:14px; line-height:26px">   原型如下：</div> <div style="margin:0px; padding:0px; font-family:Arial; line-height:26px"> <div style="color:rgb(54,46,43); font-size:14px; margin:0px; padding:0px">   （1）size_t find (const string&amp; str, size_t pos =&nbsp;0) const;&nbsp; //查找对象--<span style="margin:0px; padding:0px; color:rgb(255,0,0)">string类对象</span></div> <div style="color:rgb(54,46,43); font-size:14px; margin:0px; padding:0px">   （2）size_t find (const char* s, size_t pos = 0) const; //查找对象--<span style="margin:0px; padding:0px; color:rgb(255,0,0)">字符串</span></div> <div style="color:rgb(54,46,43); font-size:14px; margin:0px; padding:0px">   （3）size_t find (const char* s, size_t pos, size_t n) const;&nbsp; //查找对象--<span style="margin:0px; padding:0px; color:rgb(255,0,0)">字符串的前n个字符</span></div> <div style="color:rgb(54,46,43); font-size:14px; margin:0px; padding:0px">   （4）size_t find (char c, size_t pos = 0) const;&nbsp; //查找对象--<span style="margin:0px; padding:0px; color:rgb(255,0,0)">字符</span></div> <div style="color:rgb(54,46,43); font-size:14px; margin:0px; padding:0px"><span style="margin:0px; padding:0px; color:rgb(255,0,0)">结果：找到 -- 返回 第一个字符的索引</span></div> <div style="color:rgb(54,46,43); font-size:14px; margin:0px; padding:0px"><span style="margin:0px; padding:0px; color:rgb(255,0,0)">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 没找到--返回&nbsp;&nbsp; string::npos</span></div> <div style="margin:0px; padding:0px"><span style="margin:0px; padding:0px"><span style="color:#333333">to_string():将整型数转化为string类型的。</span></span></div> </div> <p></p> <p><span style="font-size:18px"><br /></span></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-22617.htm">动物医院运营管理工作内容有哪些（动物医院管理制度）</a></p>
+                                        <p>下一个：<a href="/news/article-23078.htm">基于docker部署Oracle 19c的详细记录_docker</a></p>
                                     </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-4-free-node-subscribe.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">Verge Github节点订阅每天更新19M/S免费节点订阅链接</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了加拿大、韩国、新加坡、美国、香港、欧洲、日本等地区,最高速度可达19 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                                                        <div class="row item xcblog-blog-item" data-date="2024-11-03">
-                                <div class="col-md-3">
-                                    <div class="about-img">
-                                        <a href="/free-nodes/2024-11-3-node-share.htm" class="xcblog-blog-url">
-                                            <img src="/uploads/20241103/1baf76c7685f810ab80a7c4188ad6050.webp" alt="11月3日→21.5M/S|2024年最新免费节点Verge Github订阅链接地址">
-                                        </a>
                                     </div>
-                                </div>
-                                <div class="col-md-9">
-                                    <a href="/free-nodes/2024-11-3-node-share.htm" class="xcblog-blog-url">
-                                        <h3 class="xcblog-blog-title">11月3日→21.5M/S|2024年最新免费节点Verge Github订阅链接地址</h3>
-                                    </a>
-                                    <p>这一次的节点更新覆盖了美国、韩国、日本、欧洲、香港、加拿大、新加坡等地区,最高速度可达21.5 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。</p>
-                                </div>
-                            </div>
-                            
-                            <ul class="pagination"><li><a href="/date/2024-11/page-3.htm">&laquo;</a></li> <li><a href="/date/2024-11/">1</a></li><li><a href="/date/2024-11/page-2.htm">2</a></li><li><a href="/date/2024-11/page-3.htm">3</a></li><li class="active"><span>4</span></li> <li class="disabled"><span>&raquo;</span></li></ul>                        </div>
-                    </div>
                     <div class="col-md-3">
                         <div class="panel panel-default">
     <div class="panel-heading">
@@ -151,16 +123,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-11-22-node-share.htm" title="Verge Github节点订阅每天更新19.6M/S免费节点订阅链接">Verge Github节点订阅每天更新19.6M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-4-free-node-subscribe.htm" title="Verge Github节点订阅每天更新19M/S免费节点订阅链接">Verge Github节点订阅每天更新19M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-17-free-node-subscribe-links.htm" title="Verge Github节点订阅每天更新19.7M/S免费节点订阅链接">Verge Github节点订阅每天更新19.7M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-22150.htm" title="宠物猫疫苗费用多少（宠物猫疫苗费用多少钱）">宠物猫疫苗费用多少（宠物猫疫苗费用多少钱）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-19-free-node-subscribe-links.htm" title="Verge Github节点订阅每天更新21.4M/S免费节点订阅链接">Verge Github节点订阅每天更新21.4M/S免费节点订阅链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-11-15-node-share-links.htm" title="Verge Github节点订阅每天更新22.4M/S免费节点订阅链接">Verge Github节点订阅每天更新22.4M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-22152.htm" title="宠物狗市场价格表（宠物狗市场视频）">宠物狗市场价格表（宠物狗市场视频）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-10-node-share-links.htm" title="Verge Github节点订阅每天更新19.7M/S免费节点订阅链接">Verge Github节点订阅每天更新19.7M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-8-node-share-links.htm" title="Verge Github节点订阅每天更新18.7M/S免费节点订阅链接">Verge Github节点订阅每天更新18.7M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-6-free-node-subscribe-links.htm" title="Verge Github节点订阅每天更新19.4M/S免费节点订阅链接">Verge Github节点订阅每天更新19.4M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-22617.htm" title="动物医院运营管理工作内容有哪些（动物医院管理制度）">动物医院运营管理工作内容有哪些（动物医院管理制度）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-3-node-share.htm" title="11月3日→21.5M/S|2024年最新免费节点Verge Github订阅链接地址">11月3日→21.5M/S|2024年最新免费节点Verge Github订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-3-node-share.htm" title="Verge Github节点订阅每天更新19.7M/S免费节点订阅链接">Verge Github节点订阅每天更新19.7M/S免费节点订阅链接</a></li>
                         <li class="py-2"><a href="/news/article-19408.htm" title="妙三多是几联（妙三多是几联疫苗）">妙三多是几联（妙三多是几联疫苗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-10-node-share-links.htm" title="Verge Github节点订阅每天更新19.7M/S免费节点订阅链接">Verge Github节点订阅每天更新19.7M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-18942.htm" title="丹阳有宠物收留中心吗（丹阳哪里有宠物店）">丹阳有宠物收留中心吗（丹阳哪里有宠物店）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-21-free-node-subscribe-links.htm" title="Verge Github节点订阅每天更新19.1M/S免费节点订阅链接">Verge Github节点订阅每天更新19.1M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-11-node-share-links.htm" title="Verge Github节点订阅每天更新21.8M/S免费节点订阅链接">Verge Github节点订阅每天更新21.8M/S免费节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
