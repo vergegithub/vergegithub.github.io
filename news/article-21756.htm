@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案</title>
         <meta name="description" content="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案  问题描述   解决方法1 解决方法2   一点小细节和拓展    最近在做一个SpringBoot项目，数据库" />
-        <link rel="icon" href="__ADDON__/img/vergegithub/favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css here -->
     <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
@@ -22,8 +22,7 @@
     <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
     <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
     <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
-    
-<!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -110,7 +109,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-                                          				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <div class="toc"> <h3>SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案</h3> <ul> <li><a href="#_2" rel="nofollow">问题描述</a></li> <li> <ul> <li><a href="#1_8" rel="nofollow">解决方法1</a></li> <li><a href="#2_18" rel="nofollow">解决方法2</a></li> </ul> </li> <li><a href="#_25" rel="nofollow">一点小细节和拓展</a></li> </ul> </div> </h1> <p>最近在做一个SpringBoot项目，数据库使用的是MySQL 5.7，在传递日期时间数据时出现了异常，数据库中的日期显示格式为"yy-mm-dd hh:mm:ss"，而传到前端显示的则是一长串数字，即时间戳(即从1970年1月1日00:00:00 GMT标准基准时间到当前时间经过的毫秒数)<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/d52482cba8fcef6005f29923f552a279.jpg" alt="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案"></p> <h2><a id="1_8" rel="nofollow"></a>解决方法1</h2> <p>java有两种Date类型，一种是import java.util.Date，另一种是import java.sql.Date，把util类型的Date转换为sql的Date就行了。代码如下：</p> <pre><code>    java.util.Date utilDate = user.getDate();     java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());     user.setDate(sqlDate);</code></pre> <p>因为是User类中定义的是util的Date，所以会把数据库中sql的Date变成时间戳<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/ae29f30603bb3dd21c51756359d27a42.jpg" alt="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案"></p> <h2><a id="2_18" rel="nofollow"></a>解决方法2</h2> <p>查看出现错误的时间日期所在的定义类，不出意外的话它调用的是import java.util.Date，把util改成sql就完事了<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/7154381622d4b7bf3afbf27a57baf191.jpg" alt="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案"><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/3943cc3f3e4c8a8abfaf72e8e5d6ce3e.jpg" alt="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案"></p> </h1> <p><strong>如果使用util转sql的Date，需要保证只有年月日，时间的时分秒必须为零，否则无法转换</strong></p> <p>所以这个问题的根本原因是什么呢？</p> <p><strong>我个人猜测应该是Generator生成逆向工程时类中默认生成的就是java.util.Date，导致出现时间戳问题</strong></p> <p>ok，就这样，最近也在忙着找工作，愈发感觉到人的记忆力确实不如烂笔头，写博客记录是一个非常好的习惯，希望可以保持下去吧。</p> </div> 			                <div class="clearfix"></div>
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <div class="toc"> <h3>SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案</h3> <ul> <li><a href="#_2" rel="nofollow">问题描述</a></li> <li> <ul> <li><a href="#1_8" rel="nofollow">解决方法1</a></li> <li><a href="#2_18" rel="nofollow">解决方法2</a></li> </ul> </li> <li><a href="#_25" rel="nofollow">一点小细节和拓展</a></li> </ul> </div> </h1> <p>最近在做一个SpringBoot项目，数据库使用的是MySQL 5.7，在传递日期时间数据时出现了异常，数据库中的日期显示格式为"yy-mm-dd hh:mm:ss"，而传到前端显示的则是一长串数字，即时间戳(即从1970年1月1日00:00:00 GMT标准基准时间到当前时间经过的毫秒数)<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/d52482cba8fcef6005f29923f552a279.jpg" alt="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案"></p> <h2><a id="1_8" rel="nofollow"></a>解决方法1</h2> <p>java有两种Date类型，一种是import java.util.Date，另一种是import java.sql.Date，把util类型的Date转换为sql的Date就行了。代码如下：</p> <pre><code>    java.util.Date utilDate = user.getDate();     java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());     user.setDate(sqlDate);</code></pre> <p>因为是User类中定义的是util的Date，所以会把数据库中sql的Date变成时间戳<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/ae29f30603bb3dd21c51756359d27a42.jpg" alt="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案"></p> <h2><a id="2_18" rel="nofollow"></a>解决方法2</h2> <p>查看出现错误的时间日期所在的定义类，不出意外的话它调用的是import java.util.Date，把util改成sql就完事了<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/7154381622d4b7bf3afbf27a57baf191.jpg" alt="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案"><br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220607/3943cc3f3e4c8a8abfaf72e8e5d6ce3e.jpg" alt="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案"></p> </h1> <p><strong>如果使用util转sql的Date，需要保证只有年月日，时间的时分秒必须为零，否则无法转换</strong></p> <p>所以这个问题的根本原因是什么呢？</p> <p><strong>我个人猜测应该是Generator生成逆向工程时类中默认生成的就是java.util.Date，导致出现时间戳问题</strong></p> <p>ok，就这样，最近也在忙着找工作，愈发感觉到人的记忆力确实不如烂笔头，写博客记录是一个非常好的习惯，希望可以保持下去吧。</p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-21755.htm">关于Postman调试@RequestBody入参模式接口的用例说明</a></p>
                                         <p>下一个：<a href="/news/article-22150.htm">宠物猫疫苗费用多少（宠物猫疫苗费用多少钱）</a></p>
@@ -123,16 +123,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-27250.htm" title="写给老婆的保证书挽回离婚（写给老婆的保证书挽回离婚模板）">写给老婆的保证书挽回离婚（写给老婆的保证书挽回离婚模板）</a></li>
+                        <li class="py-2"><a href="/news/article-28181.htm" title="PHP字符串运算符详解">PHP字符串运算符详解</a></li>
+                        <li class="py-2"><a href="/news/article-23520.htm" title="宠物粮食龙头 宠物粮食龙头股">宠物粮食龙头 宠物粮食龙头股</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-12-4-node-share-links.htm" title="Verge Github节点订阅每天更新18M/S免费节点订阅链接">Verge Github节点订阅每天更新18M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20787.htm" title="合肥宠物救助中心电话（合肥宠物救助中心电话多少）">合肥宠物救助中心电话（合肥宠物救助中心电话多少）</a></li>
+                        <li class="py-2"><a href="/news/article-19871.htm" title="太阳宫附近有什么好吃的（太阳宫附近游玩）">太阳宫附近有什么好吃的（太阳宫附近游玩）</a></li>
+                        <li class="py-2"><a href="/news/article-21243.htm" title="你不知道的Python容器">你不知道的Python容器</a></li>
                         <li class="py-2"><a href="/news/article-21755.htm" title="关于Postman调试@RequestBody入参模式接口的用例说明">关于Postman调试@RequestBody入参模式接口的用例说明</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-25-free-node-subscribe.htm" title="Verge Github节点订阅每天更新20.4M/S免费节点订阅链接">Verge Github节点订阅每天更新20.4M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-8-node-share-links.htm" title="Verge Github节点订阅每天更新21.8M/S免费节点订阅链接">Verge Github节点订阅每天更新21.8M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-13-node-share-links.htm" title="Verge Github节点订阅每天更新19.4M/S免费节点订阅链接">Verge Github节点订阅每天更新19.4M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-21756.htm" title="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案">SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案</a></li>
-                        <li class="py-2"><a href="/news/article-19870.htm" title="python 查看包的版本">python 查看包的版本</a></li>
-                        <li class="py-2"><a href="/news/article-22617.htm" title="动物医院运营管理工作内容有哪些（动物医院管理制度）">动物医院运营管理工作内容有哪些（动物医院管理制度）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-17-free-node-subscribe-links.htm" title="Verge Github节点订阅每天更新19.7M/S免费节点订阅链接">Verge Github节点订阅每天更新19.7M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-2-free-node-subscribe.htm" title="Verge Github节点订阅每天更新20.2M/S免费节点订阅链接">Verge Github节点订阅每天更新20.2M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-24-node-share.htm" title="Verge Github节点订阅每天更新21.9M/S免费节点订阅链接">Verge Github节点订阅每天更新21.9M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-15-free-subscribe-node.htm" title="Verge Github节点订阅每天更新22.4M/S免费节点订阅链接">Verge Github节点订阅每天更新22.4M/S免费节点订阅链接</a></li>
                     </ul>
     </div>
 </div>
@@ -144,7 +144,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">56</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">32</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -164,6 +164,15 @@
                 <div class="row">
                     <div class="col-xl-12 col-lg-12">
                         <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
                             <p>
                                 <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
                             </p>
