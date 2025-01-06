@@ -113,6 +113,7 @@
                   				  				  				<div id="content_views" class="htmledit_views"> <p>1、为字段添加@JsonIgnore注解，可以忽略该字段的序列化和反序列化。</p> <pre><code class="language-java">@JsonIgnore private String author;</code></pre> <p>2、使用JsonIgnoreProperties注解忽略多个字段</p> <pre><code class="language-java">@JsonIgnoreProperties({ "summary", "author" }) public class ArticleIgnoreProperties {  	private String title; 	private String summary; 	private String content; 	private String author;  }</code></pre> <p>JsonIgnore作用于单个字段，JsonIgnoreProperties作用于类的多个字段，两者都是用来忽略指定的字段。</p> <p>除此之外，还有另外一个以JsonIgnore开头的注解JsonIgnoreType，用于忽略指定类型（类、接口）的字段。</p> <h2>JsonIgnoreType注解</h2> <h3><a name="t3" rel="nofollow"></a><a id="JsonIgnoreType_123" rel="nofollow"></a>使用JsonIgnoreType注解忽略指定类型的字段</h3> <p>在指定的类型上，添加@JsonIgnoreType注解，可以忽略该类型的字段进行序列化。</p> <pre><code class="language-java">public class AnimalIgnoreType {  	private String name; 	private Date date; 	private Address address;  	@JsonIgnoreType 	public static class Address { 		private String city; 	} }</code></pre> <h3>使用JsonIgnoreType注解动态忽略指定类型的字段</h3> <p>前面使用JsonIgnoreType注解，忽略的类型是固定的。</p> <p>利用ObjectMapper的addMixIn方法，可以动态的将JsonIgnoreType注解应用于其他数据类型。</p> <pre><code class="language-java">public class AnimalIgnoreType {  	private String name; 	private Date date; 	private Address address;  	public static class Address { 		private String city; 		 	}  }</code></pre> <p>首先，定义一个空的类，并添加JsonIgnoreType注解。</p> <pre><code class="language-java">@JsonIgnoreType public class IgnoreType {}</code></pre> <p>在序列化时，调用ObjectMapper的addMixIn方法，将JsonIgnoreType注解应用于目标类。</p> <p>下面的例子，会将IgnoreType类的注解，添加到Date和Address上，因此序列化时这两个类对应的字段会被忽略。</p> <pre><code class="language-java">/**  * 调用ObjectMapper的addMixIn方法，将@JsonIgnoreType注解应用于任意目标类.  *   * @throws JsonProcessingException  */ @Test public void mixIn() throws JsonProcessingException { 	AnimalIgnoreType animal = new AnimalIgnoreType(); 	animal.setName("sam"); 	animal.setDate(new Date()); 	 	AnimalIgnoreType.Address address = new AnimalIgnoreType.Address(); 	address.setCity("gz"); 	animal.setAddress(address); 	 	ObjectMapper mapper = new ObjectMapper(); 	mapper.addMixIn(Date.class, IgnoreType.class); 	mapper.addMixIn(Address.class, IgnoreType.class); 	System.out.println(mapper.writeValueAsString(animal)); }</code></pre> <p>结果：{"name":"sam"}</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://996geek.com/articles/164"  rel="nofollow">《轻松学习Jackson》教程</a></p> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-36290.htm">1-spring boot&#8211;FailureAnalyzer</a></p>
+                                        <p>下一个：<a href="/news/article-36729.htm">Django实现excel导入导出</a></p>
                                     </div>
                                     </div>
                     <div class="col-md-3">
@@ -122,16 +123,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/news/article-19409.htm" title="襄阳流浪狗领养地址（襄阳流浪狗收容站电话号码是多少）">襄阳流浪狗领养地址（襄阳流浪狗收容站电话号码是多少）</a></li>
-                        <li class="py-2"><a href="/news/article-36290.htm" title="1-spring boot&#8211;FailureAnalyzer">1-spring boot&#8211;FailureAnalyzer</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-25-free-node-subscribe.htm" title="Verge Github节点订阅每天更新20.4M/S免费节点订阅链接">Verge Github节点订阅每天更新20.4M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-21244.htm" title="领养宠物须知图片大全（领养宠物需要什么条件和费用）">领养宠物须知图片大全（领养宠物需要什么条件和费用）</a></li>
-                        <li class="py-2"><a href="/news/article-31956.htm" title="合肥宠物领养救助站电话地址（合肥宠物领养合肥宠物赠送）">合肥宠物领养救助站电话地址（合肥宠物领养合肥宠物赠送）</a></li>
-                        <li class="py-2"><a href="/news/article-34812.htm" title="动物防疫法实行什么方针（动物防疫法是指）">动物防疫法实行什么方针（动物防疫法是指）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-3-node-share.htm" title="11月3日→21.5M/S|2024年最新免费节点Verge Github订阅链接地址">11月3日→21.5M/S|2024年最新免费节点Verge Github订阅链接地址</a></li>
-                        <li class="py-2"><a href="/news/article-22150.htm" title="宠物猫疫苗费用多少（宠物猫疫苗费用多少钱）">宠物猫疫苗费用多少（宠物猫疫苗费用多少钱）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-11-node-share-links.htm" title="Verge Github节点订阅每天更新21.8M/S免费节点订阅链接">Verge Github节点订阅每天更新21.8M/S免费节点订阅链接</a></li>
-                        <li class="py-2"><a href="/news/article-28638.htm" title="济南宠物狗免费赠送活动（济南宠物狗免费赠送活动是真的吗）">济南宠物狗免费赠送活动（济南宠物狗免费赠送活动是真的吗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-high-speed-nodes.htm" title="Verge Github节点订阅每天更新20.8M/S免费节点订阅链接">Verge Github节点订阅每天更新20.8M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-24929.htm" title="狗狗服装裁剪与制作视频（狗狗衣服裁剪法及图样）">狗狗服装裁剪与制作视频（狗狗衣服裁剪法及图样）</a></li>
+                        <li class="py-2"><a href="/news/article-20787.htm" title="合肥宠物救助中心电话（合肥宠物救助中心电话多少）">合肥宠物救助中心电话（合肥宠物救助中心电话多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-16-free-node-subscribe-links.htm" title="Verge Github节点订阅每天更新18.3M/S免费节点订阅链接">Verge Github节点订阅每天更新18.3M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-23523.htm" title="动物医院的电话是多少号啊（动物医院的电话号码）">动物医院的电话是多少号啊（动物医院的电话号码）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-10-node-share-links.htm" title="Verge Github节点订阅每天更新19.7M/S免费节点订阅链接">Verge Github节点订阅每天更新19.7M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-27249.htm" title="动物防疫疫苗空瓶如何销毁处理措施（动物疫苗未冷藏几小时失效）">动物防疫疫苗空瓶如何销毁处理措施（动物疫苗未冷藏几小时失效）</a></li>
+                        <li class="py-2"><a href="/news/article-26782.htm" title="猫粮加工技术 猫粮加工技术有哪些">猫粮加工技术 猫粮加工技术有哪些</a></li>
+                        <li class="py-2"><a href="/news/article-23990.htm" title="农大动物医院电话（农大动物医院预约挂号）">农大动物医院电话（农大动物医院预约挂号）</a></li>
+                        <li class="py-2"><a href="/news/article-25392.htm" title="定性检测的样本量估算之精确概率法">定性检测的样本量估算之精确概率法</a></li>
                     </ul>
     </div>
 </div>
@@ -143,7 +144,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
