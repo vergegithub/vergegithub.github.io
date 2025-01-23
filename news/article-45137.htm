@@ -1,0 +1,239 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-45137.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Springboot 使用RestTemplate</title>
+        <meta name="description" content="最近项目中springboot使用了RestTemplate，在此了解和学习了一下，有问题请指正 创建RestTemplate&nbsp; //自创建RestTemplate  public stat" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-45137.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="Springboot 使用RestTemplate" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/c293fc8c31c6c5660136076a0af47940.webp" />
+        <meta property="og:release_date" content="2025-01-23T10:41:38" />
+    <meta property="og:updated_time" content="2025-01-23T10:41:38" />
+        <meta property="og:description" content="最近项目中springboot使用了RestTemplate，在此了解和学习了一下，有问题请指正 创建RestTemplate&nbsp; //自创建RestTemplate  public stat" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Springboot 使用RestTemplate">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Springboot 使用RestTemplate</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p><strong>最近项目中springboot使用了RestTemplate，在此了解和学习了一下，有问题请指正</strong></p> <h2 id="%E5%88%9B%E5%BB%BARestTemplate%C2%A0">创建RestTemplate&nbsp;</h2> <pre><code class="language-java">//自创建RestTemplate  public static RestTemplate restTemplate() {         SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();         requestFactory.setConnectTimeout(30000);// 设置连接超时，单位毫秒         requestFactory.setReadTimeout(30000);  //设置读取超时         RestTemplate restTemplate = new RestTemplate();         restTemplate.setRequestFactory(requestFactory);         logger.info("RestTemplate初始化完成");         return restTemplate;     }    //使用注解注入 @Autowired private  RestTemplate restTemplate;</code></pre> <p>引用的是spring-web-4.3.6.RELEASE.jar</p> <h2 id="%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E5%A4%B4HttpHeaders">设置请求头HttpHeaders</h2> <p>请求头中常设置的参数是Content-Type，一般用setContentType(MediaType mediaType)方式添加MediaType类中存在的值，或者用add(name，value)的方式添加所需要的值</p> <p>MediaType类关于具体值的源码如下：</p> <pre><code class="language-java">public static final MediaType ALL = valueOf("*/*");     public static final String ALL_VALUE = "*/*";     public static final MediaType APPLICATION_ATOM_XML = valueOf("application/atom+xml");     public static final String APPLICATION_ATOM_XML_VALUE = "application/atom+xml";     public static final MediaType APPLICATION_FORM_URLENCODED = valueOf("application/x-www-form-urlencoded");     public static final String APPLICATION_FORM_URLENCODED_VALUE = "application/x-www-form-urlencoded";     public static final MediaType APPLICATION_JSON = valueOf("application/json");     public static final String APPLICATION_JSON_VALUE = "application/json";     public static final MediaType APPLICATION_JSON_UTF8 = valueOf("application/json;charset=UTF-8");     public static final String APPLICATION_JSON_UTF8_VALUE = "application/json;charset=UTF-8";     public static final MediaType APPLICATION_OCTET_STREAM = valueOf("application/octet-stream");     public static final String APPLICATION_OCTET_STREAM_VALUE = "application/octet-stream";     public static final MediaType APPLICATION_PDF = valueOf("application/pdf");     public static final String APPLICATION_PDF_VALUE = "application/pdf";     public static final MediaType APPLICATION_RSS_XML = valueOf("application/rss+xml");     public static final String APPLICATION_RSS_XML_VALUE = "application/rss+xml";     public static final MediaType APPLICATION_XHTML_XML = valueOf("application/xhtml+xml");     public static final String APPLICATION_XHTML_XML_VALUE = "application/xhtml+xml";     public static final MediaType APPLICATION_XML = valueOf("application/xml");     public static final String APPLICATION_XML_VALUE = "application/xml";     public static final MediaType IMAGE_GIF = valueOf("image/gif");     public static final String IMAGE_GIF_VALUE = "image/gif";     public static final MediaType IMAGE_JPEG = valueOf("image/jpeg");     public static final String IMAGE_JPEG_VALUE = "image/jpeg";     public static final MediaType IMAGE_PNG = valueOf("image/png");     public static final String IMAGE_PNG_VALUE = "image/png";     public static final MediaType MULTIPART_FORM_DATA = valueOf("multipart/form-data");     public static final String MULTIPART_FORM_DATA_VALUE = "multipart/form-data";     public static final MediaType TEXT_EVENT_STREAM = valueOf("text/event-stream");     public static final String TEXT_EVENT_STREAM_VALUE = "text/event-stream";     public static final MediaType TEXT_HTML = valueOf("text/html");     public static final String TEXT_HTML_VALUE = "text/html";     public static final MediaType TEXT_MARKDOWN = valueOf("text/markdown");     public static final String TEXT_MARKDOWN_VALUE = "text/markdown";     public static final MediaType TEXT_PLAIN = valueOf("text/plain");     public static final String TEXT_PLAIN_VALUE = "text/plain";     public static final MediaType TEXT_XML = valueOf("text/xml");     public static final String TEXT_XML_VALUE = "text/xml";     private static final String PARAM_QUALITY_FACTOR = "q";</code></pre> <p>&nbsp;<strong>具体写法如下：</strong></p> <pre><code class="language-java">HttpHeaders headers = new HttpHeaders(); //相当于headers.add("Content-Type","application/json;charset=UTF-8"); headers.setContentType(MediaType.APPLICATION_JSON_UTF8); 或者添加MediaType类没有的值 headers.add("Content-Type","application/x-www-form-urlencoded; charset=UTF-8");</code></pre> <h2>post请求</h2> <h3>postForEntity</h3> <p><strong>如果请求参数是form-data类型的可以如下写法：</strong></p> <pre><code class="language-java">String url = "http://127.0.0.1:8080/login"; LinkedMultiValueMap&lt;String, Object&gt; paramMap = new LinkedMultiValueMap&lt;&gt;(); paramMap.add("username", "zhangsan"); paramMap.add("password", "123456"); paramMap.add("randomStr",String.valueOf(System.currentTimeMillis())); HttpEntity&lt;LinkedMultiValueMap&lt;String, Object&gt;&gt; httpEntity = new HttpEntity&lt;&gt;(paramMap, requestHeaders);  ResponseEntity&lt;String&gt; exchange = restTemplate.postForEntity(url, httpEntity, String.class);  String resultRemote = exchange.getBody();//得到返回的值 </code></pre> <p><strong>具体的请求参数和返回的参数样例如下：</strong></p> <p style="margin-left:0pt;">参数：</p> <p style="margin-left:0pt;">｛</p> <p style="margin-left:0pt;">username: 张三</p> <p style="margin-left:0pt;">password: 123456</p> <p style="margin-left:0pt;">randomStr: 1597300142432</p> <p style="margin-left:0pt;">｝</p> <p style="margin-left:0pt;">返回：</p> <p style="margin-left:21pt;">{<!-- --></p> <p style="margin-left:21pt;">"code": 200,</p> <p style="margin-left:21pt;">"msg": "操作成功",</p> <p style="margin-left:21pt;">"data": {<!-- --></p> <p style="margin-left:21pt;">"token": "dfghjkl",</p> <p style="margin-left:21pt;">"username": "张三",</p> <p style="margin-left:21pt;">},</p> <p style="margin-left:21pt;">"timestamp": 1597299860</p> <p style="margin-left:0pt;">}</p> <p><strong>如果请求参数是json，而且里面还有json数组</strong></p> <pre><code class="language-java">Map&lt;String,Object&gt; jsonMap = new HashMap&lt;&gt;(); jsonMap.put("com","ty"); Map&lt;String,Object&gt; deMap = new HashMap&lt;&gt;(); deMap.put("name", "设备"); List&lt;Object&gt; list = new ArrayList&lt;&gt;(); list.add(deMap); jsonMap.put("des",list); logger.info("----"+JSONObject.toJSONString(jsonMap));  HttpEntity&lt;String&gt;  httpEntitys = new HttpEntity&lt;&gt;(JSONObject.toJSONString(jsonMap),requestHeader); ResponseEntity&lt;String&gt; exchanges = restTemplate.postForEntity(url, httpEntitys, String.class);  String resultRemote = exchanges.getBody(); Map stringToMap = JSONObject.parseObject(resultRemote);</code></pre> <p>例子：</p> <p style="margin-left:0pt;">{<!-- --></p> <p style="margin-left:0pt;">&nbsp; &nbsp; des": [{<!-- --></p> <p style="margin-left:0pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "name": "设备"</p> <p style="margin-left:0pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;}],</p> <p style="margin-left:0pt;">"com": "ty"</p> <p style="margin-left:0pt;">}</p> <p style="margin-left:0pt;">返回：</p> <p style="margin-left:0pt;">{<!-- --></p> <p style="margin-left:0pt;">"code": 200,</p> <p style="margin-left:0pt;">"msg": "操作成功",</p> <p style="margin-left:0pt;">"data": "567897890-090",</p> <p style="margin-left:0pt;">"timestamp": 2367301740</p> <p style="margin-left:0pt;">}</p> <p style="margin-left:0pt;">&nbsp;</p> <h2 style="margin-left:0pt;">Get请求</h2> <h3>getForEntity请求不带参数，默认请求头</h3> <pre><code class="language-java">//请求不带参数，默认请求头 String url = "xxx.xx.xx"; ResponseEntity&lt;String&gt; result = restTemplate.getForEntity(url,String.class);   </code></pre> <h3 style="margin-left:0pt;">getForEntity请求带参数</h3> <pre><code class="language-java">//URL作为String String url = "http://127.0.0.1:8080/login?name={name}"; Map&lt;String,String&gt; map = new HashMap&lt;&gt;(); map.put("name","张三"); ResponseEntity&lt;String&gt; result = restTemplate.getForEntity(url,String.class,map);  //URL作为URI,参数存进URI中 UriComponents uriComponents = UriComponentsBuilder.fromUriString(url).build().expand("李四").encode(); URI uri = uriComponents.toUri(); ResponseEntity&lt;String&gt; result = restTemplate.getForEntity(uri,String.class);   //返回参数也可以是自定义对象例如User String url = "http://127.0.0.1:8080/login?name={name}"; Map&lt;String,String&gt; map = new HashMap&lt;&gt;(); map.put("name","张三"); ResponseEntity&lt;User&gt; result = restTemplate.getForEntity(url,User.class,map); </code></pre> <h3 style="margin-left:0pt;">get请求带请求头 exchange</h3> <pre><code class="language-java">HttpHeaders resultRequestHeader = new HttpHeaders(); resultRequestHeader.add("Authorization", "wetyuigyihjj"); resultRequestHeader.add("charset", "UTF-8"); resultRequestHeader.setContentType(MediaType.APPLICATION_JSON); LinkedMultiValueMap&lt;String, Object&gt; resultParamMap = new LinkedMultiValueMap&lt;&gt;();  HttpEntity&lt;String&gt;  resultHttpEntity = new HttpEntity&lt;&gt;(null, resultRequestHeader); ResponseEntity&lt;String&gt; exchange = restTemplate.exchange(resultUrl, HttpMethod.GET,resultHttpEntity,String.class);  resultRemote = exchange.getBody(); logger.info("结果resultRemote:"+resultRemote); Map stringToMap = JSONObject.parseObject(resultRemote);</code></pre> <h2 style="margin-left:0pt;">PUT请求</h2> <pre><code class="language-java">//put方法的参数和postForEntity方法的参数基本一致 String url = "http://127.0.0.1:8080/login"; Map&lt;String,Object&gt; jsonMap = new HashMap&lt;&gt;(); jsonMap.put("username","admin"); jsonMap.put("password","123456"); HttpEntity&lt;String&gt;  httpEntitys = new HttpEntity&lt;&gt;(JSONObject.toJSONString(jsonMap),requestHeaders);  restTemplate.put(url,httpEntitys,String.class);</code></pre> <p style="margin-left:0pt;">&nbsp;</p> <h3 style="margin-left:0pt;">DELETE 请求</h3> <pre><code class="language-java">String url = "http://127.0.0.1:8080/get?name={name}"; restTemplate.delete(url,"张三");</code></pre> <p style="margin-left:0pt;">&nbsp;</p> <h2 style="margin-left:0pt;">exchange方法</h2> <h3>post请求</h3> <pre><code class="language-java">String url = "http://127.0.0.1:8080/login"; LinkedMultiValueMap&lt;String, Object&gt; paramMap = new LinkedMultiValueMap&lt;&gt;(); paramMap.add("username", "zhangsan"); paramMap.add("password", "123456"); paramMap.add("randomStr",String.valueOf(System.currentTimeMillis())); HttpEntity&lt;LinkedMultiValueMap&lt;String, Object&gt;&gt; httpEntity = new HttpEntity&lt;&gt;(paramMap, requestHeaders);  ResponseEntity&lt;String&gt; result = restTemplate.exchange(url, HttpMethod.POST,httpEntitys,String.class);  String resultRemote = exchange.getBody();//得到返回的值</code></pre> <pre>&nbsp;</pre> <h3>get请求</h3> <pre><code class="language-java">ResponseEntity&lt;String&gt; exchange = restTemplate.exchange(resultUrl, HttpMethod.GET,resultHttpEntity,String.class);  或者  ResponseEntity&lt;String&gt; exchange = restTemplate.exchange(url, HttpMethod.GET,null,String.class);</code></pre> <p>&nbsp;</p> <h3>put请求</h3> <pre><code class="language-java">String url = "http://127.0.0.1:8080/login"; LinkedMultiValueMap&lt;String, Object&gt; paramMap = new LinkedMultiValueMap&lt;&gt;(); paramMap.add("username", "zhangsan"); paramMap.add("password", "123456"); paramMap.add("randomStr",String.valueOf(System.currentTimeMillis())); HttpEntity&lt;LinkedMultiValueMap&lt;String, Object&gt;&gt; httpEntity = new HttpEntity&lt;&gt;(paramMap, requestHeaders);  ResponseEntity&lt;String&gt; result = restTemplate.exchange(url, HttpMethod.PUT,httpEntitys,String.class);</code></pre> <h3>delete请求</h3> <pre><code class="language-java">String url = "http://127.0.0.1:8080/get"; ResponseEntity&lt;String&gt; result = restTemplate.exchange(url + "?id={id}", HttpMethod.DELETE, null, String.class, 56789);</code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-44621.htm">动物疫苗厂家排名前十有哪些品种（动物疫苗公司排名）</a></p>
+                                        <p>下一个：<a href="/news/article-45138.htm">动物疫苗研究方向及前景（动物疫苗研究方向及前景如何）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-28637.htm" title="使用 docker-compose 部署 golang 的 Athens 私有代理">使用 docker-compose 部署 golang 的 Athens 私有代理</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-20-free-high-speed-nodes.htm" title="Verge Github节点订阅每天更新21.9M/S免费节点订阅链接">Verge Github节点订阅每天更新21.9M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-17-node-share.htm" title="Verge Github节点订阅每天更新20.1M/S免费节点订阅链接">Verge Github节点订阅每天更新20.1M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-30017.htm" title="打过疫苗的动物会携带狂犬病么（动物打过疫苗了人还要打吗）">打过疫苗的动物会携带狂犬病么（动物打过疫苗了人还要打吗）</a></li>
+                        <li class="py-2"><a href="/news/article-26782.htm" title="猫粮加工技术 猫粮加工技术有哪些">猫粮加工技术 猫粮加工技术有哪些</a></li>
+                        <li class="py-2"><a href="/news/article-22152.htm" title="宠物狗市场价格表（宠物狗市场视频）">宠物狗市场价格表（宠物狗市场视频）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-18-free-high-speed-nodes.htm" title="Verge Github节点订阅每天更新18M/S免费节点订阅链接">Verge Github节点订阅每天更新18M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-20786.htm" title="你的编程能力从什么时候开始突飞猛进? 我的回答：2013年，我开始喜欢编程了。">你的编程能力从什么时候开始突飞猛进? 我的回答：2013年，我开始喜欢编程了。</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-10-free-high-speed-nodes.htm" title="Verge Github节点订阅每天更新21M/S免费节点订阅链接">Verge Github节点订阅每天更新21M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-24928.htm" title="新疆宠物救助电话（新疆流浪动物救助站）">新疆宠物救助电话（新疆流浪动物救助站）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">69</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">32</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
