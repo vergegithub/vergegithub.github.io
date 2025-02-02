@@ -1,0 +1,242 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-49601.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>python读取hdfs上的parquet文件以及python访问hdfs HA的三种方法</title>
+        <meta name="description" content="python读取hdfs上的parquet文件 在使用python做大数据和机器学习处理过程中，首先需要读取hdfs数据，对于常用格式数据一般比较容易读取，parquet略微特殊。从hdfs上使用py" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-49601.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="python读取hdfs上的parquet文件以及python访问hdfs HA的三种方法" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/ac4186d343fbd233cdea0f7da96950ba.webp" />
+        <meta property="og:release_date" content="2025-02-01T07:15:07" />
+    <meta property="og:updated_time" content="2025-02-01T07:15:07" />
+        <meta property="og:description" content="python读取hdfs上的parquet文件 在使用python做大数据和机器学习处理过程中，首先需要读取hdfs数据，对于常用格式数据一般比较容易读取，parquet略微特殊。从hdfs上使用py" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="python读取hdfs上的parquet文件以及python访问hdfs HA的三种方法">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                <li><a href="#">关于</a></li>
+                                        <li><a href="#">联系</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>python读取hdfs上的parquet文件以及python访问hdfs HA的三种方法</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h3>python读取hdfs上的parquet文件</h3> <p>在使用python做大数据和机器学习处理过程中，首先需要读取hdfs数据，对于常用格式数据一般比较容易读取，parquet略微特殊。从hdfs上使用python获取parquet格式数据的方法(当然也可以先把文件拉到本地再读取也可以)：</p> <p>1、安装anaconda环境。</p> <p>2、安装hdfs3。<br /> &nbsp; &nbsp; &nbsp;&nbsp;conda install hdfs3</p> <p>3、安装fastparquet。<br /> &nbsp; &nbsp; &nbsp; conda install fastparquet</p> <p>4、安装python-snappy。<br /> &nbsp; &nbsp; &nbsp;&nbsp;conda install python-snappy</p> <p>5、读取文件</p> <pre class="has"><code class="language-python">##namenode mode: from hdfs3 import HDFileSystem from fastparquet import ParquetFile  hdfs = HDFileSystem(host=IP, port=8020) sc = hdfs.open  pf = ParquetFile(filename, open_with=sc) df = pf.to_pandas()  ##返回pandas的DataFrame类型   ##HA mode: from hdfs3 import HDFileSystem from fastparquet import ParquetFile  host = "nameservice1" conf = { &nbsp; &nbsp; &nbsp; &nbsp; "dfs.nameservices":"nameservice1", &nbsp; &nbsp; &nbsp; &nbsp; ......  } hdfs = HDFileSystem(host = host, pars = conf) ......</code></pre> <h3>python访问HDFS HA的三种方法</h3> <p>python访问hdfs常用的包有三个，如下：</p> <p>1、hdfs3</p> <p>其实从安装便捷性和使用上来说，并不推荐hdfs3，因为他的系统依赖和网络要求较高，但是某些情况下使用hdfs3会比较方便，<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://hdfs3.readthedocs.io/en/latest/"  rel="nofollow">官网资料点这里</a>。如上面介绍，IP直接访问namenode：</p> <pre class="has"><code class="language-python">from hdfs3 import HDFileSystem  hdfs = HDFileSystem(host=namenode, port=8020) hdfs.ls('/tmp')</code></pre> <p>HA访问：</p> <pre class="has"><code class="language-python">host = "nameservice1" conf = {"dfs.nameservices": "nameservice1",         "dfs.ha.namenodes.nameservice1": "namenode113,namenode188",         "dfs.namenode.rpc-address.nameservice1.namenode113": "hostname_of_server1:8020",         "dfs.namenode.rpc-address.nameservice1.namenode188": "hostname_of_server2:8020",         "dfs.namenode.http-address.nameservice1.namenode188": "hostname_of_server1:50070",         "dfs.namenode.http-address.nameservice1.namenode188": "hostname_of_server2:50070",         "hadoop.security.authentication": "kerberos" } fs = HDFileSystem(host=host, pars=conf)   ##或者下面这种配置 host = "ns1" conf = {         "dfs.nameservices":"ns1", 		"dfs.ha.namenodes.ns1":"namenode122,namenode115", 		"dfs.namenode.rpc-address.ns1.namenode122":"nnlab01:8020", 		"dfs.namenode.servicerpc-address.ns1.namenode122":"nnlab01:8022", 		"dfs.namenode.http-address.ns1.namenode122":"nnlab01:50070", 		"dfs.namenode.https-address.ns1.namenode122":"nnlab01:50470", 		"dfs.namenode.rpc-address.ns1.namenode115":"nnlab02:8020", 		"dfs.namenode.servicerpc-address.ns1.namenode115":"nnlab02:8022", 		"dfs.namenode.http-address.ns1.namenode115":"nnlab02:50070", 		"dfs.namenode.https-address.ns1.namenode115":"nnlab02:50470", }  hdfs = HDFileSystem(host = host, pars = conf)</code></pre> <p>2、hdfs</p> <p>这种方法在使用的时候配置比较简单，<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://hdfscli.readthedocs.io/en/latest/"  rel="nofollow">官网资料</a>也比较丰富，但是需要注意的是该API可以模拟用户访问，权限较大。IP直接访问：</p> <pre class="has"><code>import hdfs  client = hdfs.client.InsecureClient(url="http://namenode:50070", user="hdfs")</code></pre> <p>HA访问：</p> <pre class="has"><code class="language-python">import hdfs  client = hdfs.client.InsecureClient(url="http://namenode1:50070;http://namenode2:50070", user="hdfs")</code></pre> <p>3、pyhdfs</p> <p>安装命令：pip install PyHDFS</p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://pyhdfs.readthedocs.io/en/latest/"  rel="nofollow">官网地址</a>，直接访问：</p> <pre class="has"><code class="language-python">import pyhdfs  client = pyhdfs.HdfsClient(hosts="namenode:50070",user_name="hdfs")</code></pre> <p>HA访问</p> <pre class="has"><code class="language-python">import pyhdfs  client = pyhdfs.HdfsClient(hosts=["namenode1:50070","namenode2:50070"],user_name="hdfs")</code></pre> <p>&nbsp;</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-49068.htm">聊城宠物用品专卖店在哪里（聊城哪里有宠物大市场!）</a></p>
+                                        <p>下一个：<a href="/news/article-49602.htm">宠物领养送养平台ER图 宠物领养赠送平台有哪些</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-27708.htm" title="宠物粮是什么垃圾（宠物粮是食品吗）">宠物粮是什么垃圾（宠物粮是食品吗）</a></li>
+                        <li class="py-2"><a href="/news/article-48448.htm" title="动物疫苗公司10强排名 动物疫苗公司10强排名榜">动物疫苗公司10强排名 动物疫苗公司10强排名榜</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-31-free-node-subscribe.htm" title="Verge Github节点订阅每天更新20.1M/S免费节点订阅链接">Verge Github节点订阅每天更新20.1M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-18943.htm" title="猫粮批发市场进货渠道（猫粮批发市场进货渠道有哪些）">猫粮批发市场进货渠道（猫粮批发市场进货渠道有哪些）</a></li>
+                        <li class="py-2"><a href="/news/article-47095.htm" title="猫咪驱虫的正确方法 猫咪驱虫的正确方法时间">猫咪驱虫的正确方法 猫咪驱虫的正确方法时间</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-4-free-node-subscribe.htm" title="Verge Github节点订阅每天更新19M/S免费节点订阅链接">Verge Github节点订阅每天更新19M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-high-speed-nodes.htm" title="Verge Github节点订阅每天更新20.8M/S免费节点订阅链接">Verge Github节点订阅每天更新20.8M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-30530.htm" title="成都领养宠物中心有哪些（成都领养宠物中心有哪些公司）">成都领养宠物中心有哪些（成都领养宠物中心有哪些公司）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-29-latest-clash-verge-rev-node.htm" title="「1月29日」每日订阅更新，21.3M/S高速Shadowrocket/Clash/V2ray/SSR/Clash Verge免费节点链接分享">「1月29日」每日订阅更新，21.3M/S高速Shadowrocket/Clash/V2ray/SSR/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-42156.htm" title="vue 的ESlint .eslintrc.js 文件 常用配置和注释">vue 的ESlint .eslintrc.js 文件 常用配置和注释</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">32</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
