@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-54932.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>java中RabbitMQ高级应用_java</title>
+        <meta name="description" content="目录  1、消息可靠性投递   1.1、确认模式  1.2、退回模式  1.3、确认机制  2、消费端限流  3、消息过期时间  4、死信队列   4.1、死信概念  4.2、延迟队列     1、消" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-54932.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="java中RabbitMQ高级应用_java" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/326c8530582e5fd4e00c719177f7764f.webp" />
+        <meta property="og:release_date" content="2025-02-11T05:44:27" />
+    <meta property="og:updated_time" content="2025-02-11T05:44:27" />
+        <meta property="og:description" content="目录  1、消息可靠性投递   1.1、确认模式  1.2、退回模式  1.3、确认机制  2、消费端限流  3、消息过期时间  4、死信队列   4.1、死信概念  4.2、延迟队列     1、消" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="java中RabbitMQ高级应用_java">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>java中RabbitMQ高级应用_java</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">1、消息可靠性投递</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_0_0" rel="nofollow"> 1.1、确认模式</a></li> <li><a href="#_lab2_0_1" rel="nofollow"> 1.2、退回模式</a></li> <li><a href="#_lab2_0_2" rel="nofollow"> 1.3、确认机制</a></li> </ul> <li><a href="#_label1" rel="nofollow">2、消费端限流</a></li> <ul class="second_class_ul"></ul> <li><a href="#_label2" rel="nofollow">3、消息过期时间</a></li> <ul class="second_class_ul"></ul> <li><a href="#_label3" rel="nofollow">4、死信队列</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_3_3" rel="nofollow"> 4.1、死信概念</a></li> <li><a href="#_lab2_3_4" rel="nofollow"> 4.2、延迟队列</a></li> </ul> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>1、消息可靠性投递</h2> <p> 在使用 <code>RabbitMQ</code> 的时候，生产者在进行消息投递的时候如果想知道消息是否成功的投递到对应的交换机和队列中，有两种方式可以用来控制消息投递的可靠性模式 。</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220504/6978a6b462e2b5214ba7f757ddfa2d7c.jpg"></p> <p> 由上图的整个消息的投递过程来看，生产者的消息进入到中间件中会首先到达交换机，然后再从交换机传递到队列中去，也就是分为两步走战略。那么消息的丢失情况也就是会出现在这两个阶段中，RabbitMQ 贴心的为我们提供了针对于这两个部分的可靠新传递模式：</p> <ul> <li> <strong>confirm 模式</strong>。</li> <li> <strong>return 模式</strong>。</li> </ul> <p> 利用这两个回调模式来确保消息的传递可靠。</p> <p class="maodian"><a name="_lab2_0_0" rel="nofollow"></a></p> <h3> 1.1、确认模式</h3> <p> 消息从生产者到交换机之间传递会返回一个 <code>confirmCallback</code> 的回调。可以直接在 <code>rabbitTemplate</code> 实例中进行确认逻辑的设置。如果是使用 <code>XML</code> 配置的话需要在工厂配置开启 <strong>publisher-confirms="true"</strong>，<code>YAML</code> 的配置就直接 <strong>publisher-confirm-type: correlated</strong>，他默认是 <code>NONE</code> ，需要手动开启。</p> <div class="ay1code"> <pre class="brush:java;">@RunWith(SpringJUnit4ClassRunner.class)  @ContextConfiguration(locations = "classpath:spring-rabbitmq.xml")  public class Producer {      @Autowired      private RabbitTemplate rabbitTemplate;        @Test      public void producer() throws InterruptedException {          rabbitTemplate.setConfirmCallback(new RabbitTemplate.ConfirmCallback() {              @Override              public void confirm(CorrelationData correlationData, boolean b, String s) {                  System.out.println();                  if (!b) {                      //	消息重发之类的处理                      System.out.println(s);                  } else {                      System.out.println("交换机成功接收消息");                  }              }          });          rabbitTemplate.convertAndSend("default_exchange", "default_queue",                  "hello world &amp; beordie");          TimeUnit.SECONDS.sleep(5);      }  }</pre> </div> <p> 上面的确认是由一个 <code>confirm</code> 的函数执行的，里面携带了三个参数，第一个是配置的相关信息，第二个表示交换机是否成功的接收到消息，第三个参数是指没有成功接收消息的原因。</p> <p class="maodian"><a name="_lab2_0_1" rel="nofollow"></a></p> <h3> 1.2、退回模式</h3> <p> 从交换机到消息队列投递失败会返回一个 <code>returnCallback</code> 。在工厂配置中开启回退模式 <strong>publisher-returns="true"</strong> ，设置交换机处理消息失败的模式（默认 false 直接将消息进行丢弃），添加退回处理的逻辑。</p> <div class="ay1code"> <pre class="brush:java;">@RunWith(SpringJUnit4ClassRunner.class)  @ContextConfiguration(locations = "classpath:spring-rabbitmq.xml")  public class Producer {      @Autowired      private RabbitTemplate rabbitTemplate;        @Test      public void producer() throws InterruptedException {          rabbitTemplate.setMandatory(true);          rabbitTemplate.setReturnCallback(new RabbitTemplate.ReturnCallback() {              @Override              public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {                  //  重发逻辑处理                  System.out.println(message.getBody() + " 投递消息队列失败");              }          });          rabbitTemplate.convertAndSend("default_exchange", "default_queue",                  "hello world &amp; beordie");          TimeUnit.SECONDS.sleep(5);      }  }</pre> </div> <p> <code>returnedMessage</code> 中携带五个参数、分别指的是消息对象、错误码、错误信息、交换机、路由键。</p> <p class="maodian"><a name="_lab2_0_2" rel="nofollow"></a></p> <h3> 1.3、确认机制</h3> <p> 在消费者抓取消息队列中的数据取消费之后会有一个确认机制进行消息的确认，防止因为抓取消息之后但没有消费成功而导致的消息丢失。有三种确认方式：</p> <ul> <li> <p><strong>自动确认</strong>：<code>acknowledge="none"</code></p> </li> <li> <p><strong>手动确认</strong>：<code>acknowledge="manual"</code></p> </li> <li> <p><strong>根据异常情况确认</strong>：<code>acknowledge="auto"</code></p> </li> </ul> <p> 其中自动确认是指一旦消息被消费者抓取就自动默认成功，并将消息从消息队列中进行移除，如果这个时候消费端消费出现问题，那么也会是默认消息消费成功，但是实际上是没有消费成功的，也就是当前的消息丢失了。默认的情况就是自动确认机制。</p> <p> 如果设置手动确认的方式，就需要在正常消费消息之后进行回调确认 <code>channel.basicAck()</code>，手动签收。如果业务处理过程中发生了异常则调用 <code>channel.basicNack()</code> 重新发送消息。</p> <p> 首先需要在队列绑定时进行确认机制的配置，设置为手动签收。</p> <div class="ay1code"> <pre class="brush:xml;">&lt;!-- 绑定队列 --&gt;  &lt;rabbit:listener-container connection-factory="rabbitFactory" auto-declare="true" acknowledge="manual"&gt;      &lt;rabbit:listener ref="rabbirConsumer" queue-names="default_queue"/&gt;  &lt;/rabbit:listener-container&gt;</pre> </div> <p> 生产者一端不用更改，只需要改变消费者的实现进行消息自动签收就可以了，正常执行业务则签收消息，业务发生错误则选择消息拒签，消息重发或者丢弃。</p> <div class="ay1code"> <pre class="brush:java;">public class ConsumerAck implements ChannelAwareMessageListener {      @Override      public void onMessage(Message message, Channel channel) throws Exception {          //  消息唯一ID          long tag = message.getMessageProperties().getDeliveryTag();          try {              String msg = new String(message.getBody(), "utf-8");              channel.basicAck(tag, true);              System.out.println("接收消息: " + msg);          } catch (Exception e) {              System.out.println("接收消息异常");              channel.basicNack(tag, true, true);              e.printStackTrace();          }      }  }</pre> </div> <p> 里面涉及三个简单的签收函数，一是正确签收的 <code>basicAck</code> ，二是单条拒签的 <code>basicReject</code> ，三是批量拒签的 <code>basicNack</code> 。</p> <ul> <li> <strong>basicAck</strong> 第一个参数表示消息在通道中的唯一ID，只针对当前的 Channel；第二个参数表示是否批量同意，如果是 false 的话只会同意签收当前ID的一条消息，将其从消息队列中进行删除，而如果是 true 的话将会把此ID之前的消息一起给同意签收了。</li> <li> <strong>basicReject</strong> 第一个参数依旧表示消息的唯一ID，第二个参数表示是否重新回队发送，false 表示直接丢弃该条消息或者有死信队列可以接收， true 则表示重新回队进行消息发送，所有操作只针对当前的消息。</li> <li> <strong>basicNack</strong> 比第二个多了一个参数，也就是处于中间位置的布尔值，表示是否批量进行。</li> </ul> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>2、消费端限流</h2> <p> 在用户请求和DB服务处理之间增加消息中间件的隔离，使得突发流量全部让消息队列来抗，降低服务端被冲垮的可能性。让所有的请求都往队列中存，消费端只需要匀速的取出消息进行消费，这样就能保证运行效率，也不会因为后台的阻塞而导致客户端得不到正常的响应（当然指的是一些不需要同步回显的任务）。</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220504/af7d6cceb853c9e8cae99b893d50e496.jpg"></p> <p> 只需要在消费者绑定消息队列时指定取出消息的速率即可，需要使用手动签收的方式，每进行一次的签收才会从队列中再取出下一条数据。</p> <div class="ay1code"> <pre class="brush:xml;">&lt;!-- 绑定队列 --&gt;  &lt;rabbit:listener-container connection-factory="rabbitFactory" auto-declare="true"                             acknowledge="manual" prefetch="1"&gt;      &lt;rabbit:listener ref="rabbirConsumer" queue-names="default_queue"/&gt;  &lt;/rabbit:listener-container&gt;</pre> </div> <p class="maodian"><a name="_label2" rel="nofollow"></a></p> <h2>3、消息过期时间</h2> <p> 消息队列提供了存储在队列中消息的过期时间，分为两个方向的实现，一个是针对于整个队列中的所有消息，也就是队列的过期时间，另一个是针对当前消息的过期时间，也就是针对于单条消息单独设置。</p> <p> 队列的过期时间设置很简单，只需要在创建队列时进行过期时间的指定即可，也可以通过控制台直接创建指定过期时间。一旦队列过期时间到了，队列中还未被消费的消息都将过期，进行队列的过期处理。</p> <div class="ay1code"> <pre class="brush:xml;">&lt;rabbit:queue id="default_queue" name="default_queue" auto-declare="true"&gt;      &lt;rabbit:queue-arguments&gt;          &lt;entry key="x-message-ttl" value="10000" value-type="java.lang.Integer"/&gt;      &lt;/rabbit:queue-arguments&gt;  &lt;/rabbit:queue&gt;</pre> </div> <p> 单条消息的过期时间需要在发送的时候进行单独的指定，发送的时候指定配置的额外信息，配置的编写由配置类完成。</p> <p> 如果一条消息的过期时间到了，但是他此时处于队列的中间，那么他将不会被处理，只有当之后处理到时候才会进行判断是否过期。</p> <div class="ay1code"> <pre class="brush:java;">MessagePostProcessor messagePostProcessor = new MessagePostProcessor() {      @Override      public Message postProcessMessage(Message message) throws          AmqpException {          //	设置 message 的过期时间          message.getMessageProperties().setExpiration("5000");          //	返回该消息          return message;      }  };  rabbitTemplate.convertAndSend("exchange", "route", "msg", messagePostProcessor);</pre> </div> <p> 如果说同时设置了消息的过期时间和队列的过期时间，那么最终的过期时间由最短的时间进行决定，也就是说如果当前消息的过期时间没到，但是整个队列的过期时间到了，那么队列中的所有消息也自然就过期了，执行过期的处理策略。</p> <p class="maodian"><a name="_label3" rel="nofollow"></a></p> <h2>4、死信队列</h2> <p class="maodian"><a name="_lab2_3_3" rel="nofollow"></a></p> <h3> 4.1、死信概念</h3> <blockquote> <p>死信队列指的是死信交换机，当一条消息成为死信之后可以重新发送到另一个交换机进行处理，而进行处理的这个交换机就叫做死信交换机。</p> </blockquote> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220504/eebaf0255bdc6e14f49d5ec1e718d617.jpg"></p> <ul> <li>消息成为死信消息有几种情况 <p>队列的消息长度达到限制</p> <p>消费者拒接消息的时候不把消息重新放入队列中</p> <p>队列存在消息过期设置，消息超时未被消费</p> <p>消息存在过期时间，在投递给消费者时发现过期</p> </li> </ul> <p> 在创建队列时可以在配置中指定相关的信息，例如死信交换机、队列长度等等，之后的一系列工作就不由程序员进行操作了，MQ 会自己完成配置过的事件响应。</p> <div class="ay1code"> <pre class="brush:xml;">&lt;rabbit:queue id="default_queue" name="default_queue" auto-declare="true"&gt;      &lt;rabbit:queue-arguments&gt;          &lt;!-- 死信交换机 --&gt;          &lt;entry key="x-dead-letter-exchange" value-type="dlx_exchane"/&gt;          &lt;!-- 路由 --&gt;          &lt;entry key="x-dead-letter-routing-key" value-type="dlx_routing"/&gt;          &lt;!-- 队列过期时间 --&gt;          &lt;entry key="x-message-ttl" value="10000" value-type="java.lang.Integer"/&gt;          &lt;!-- 队列长度 --&gt;          &lt;entry key="x-max-length" value-type="java.lang.Integer" value="10"/&gt;      &lt;/rabbit:queue-arguments&gt;  &lt;/rabbit:queue&gt;</pre> </div> <p class="maodian"><a name="_lab2_3_4" rel="nofollow"></a></p> <h3> 4.2、延迟队列</h3> <p> 延迟队列指的是消息在进入队列后不会立即被消费，只有到达指定时间之后才会被消费，也就是需要有一个时间的判断条件。</p> <p> 消息队列实际上是没有提供对延迟队列的实现的，但是可以通过 <code>TTL</code> + <code>死信队列</code> 的方式完成，设置一个队列，不被任何的消费者所消费，所有的消息进入都会被保存在里面，设置队列的过期时间，一旦队列过期将所有的消息过渡到绑定的死信队列中。</p> <p> 再由具体的消费者来消费死信队列中的消息，这样就实现了延迟队列的功能。</p> <p> 例如实现一个下单超时支付取消订单的功能：</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220504/9d500e2585d53c54ce712bd4dc0a25ec.jpg"></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-54379.htm">厦门宠物领养中心在哪个位置好（厦门宠物领养中心在哪个位置好呢）</a></p>
+                                        <p>下一个：<a href="/news/article-54933.htm">宠物领养送养平台有哪些（宠物赠送领养都在哪个网站）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-7-free-node-subscribe-links.htm" title="Verge Github节点订阅每天更新20M/S免费节点订阅链接">Verge Github节点订阅每天更新20M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-11-free-node-subscribe.htm" title="「2月11日」每日订阅更新，22.9M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享">「2月11日」每日订阅更新，22.9M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-1-clash-verge-rev-node-share.htm" title="「2月1日」每日订阅更新，20.9M/S高速V2ray/Clash/SSR/Shadowrocket/Clash Verge免费节点链接分享">「2月1日」每日订阅更新，20.9M/S高速V2ray/Clash/SSR/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-23523.htm" title="动物医院的电话是多少号啊（动物医院的电话号码）">动物医院的电话是多少号啊（动物医院的电话号码）</a></li>
+                        <li class="py-2"><a href="/news/article-51177.htm" title="LeetCode 5436.一维数组的动态和(C++)">LeetCode 5436.一维数组的动态和(C++)</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-11-free-clash-verge-rev-node.htm" title="「1月11日」每日订阅更新，22.9M/S高速V2ray/Shadowrocket/SSR/Clash/Clash Verge免费节点链接分享">「1月11日」每日订阅更新，22.9M/S高速V2ray/Shadowrocket/SSR/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-22616.htm" title="1-spring boot&#8211;FailureAnalyzer">1-spring boot&#8211;FailureAnalyzer</a></li>
+                        <li class="py-2"><a href="/news/article-29105.htm" title="mysql 窗口函数">mysql 窗口函数</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-27-clash-verge-rev-node.htm" title="「1月27日」每日订阅更新，18.6M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享">「1月27日」每日订阅更新，18.6M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-30530.htm" title="成都领养宠物中心有哪些（成都领养宠物中心有哪些公司）">成都领养宠物中心有哪些（成都领养宠物中心有哪些公司）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
