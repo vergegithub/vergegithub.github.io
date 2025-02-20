@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-59441.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DecimalFormat保留小数位</title>
+        <meta name="description" content="业务上有些数据需要对齐进行格式统一，比如位数问题，一个产品的良率信息，需要确保是要保留小数点几位，那么我们在用java处理的时候可以用DecimalFormat这个格式化类来达到目的。  Decima" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-59441.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="DecimalFormat保留小数位" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/c293fc8c31c6c5660136076a0af47940.webp" />
+        <meta property="og:release_date" content="2025-02-19T06:38:05" />
+    <meta property="og:updated_time" content="2025-02-19T06:38:05" />
+        <meta property="og:description" content="业务上有些数据需要对齐进行格式统一，比如位数问题，一个产品的良率信息，需要确保是要保留小数点几位，那么我们在用java处理的时候可以用DecimalFormat这个格式化类来达到目的。  Decima" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="DecimalFormat保留小数位">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>DecimalFormat保留小数位</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <blockquote> <p>业务上有些数据需要对齐进行格式统一，比如位数问题，一个产品的良率信息，需要确保是要保留小数点几位，那么我们在用java处理的时候可以用DecimalFormat这个格式化类来达到目的。</p> </blockquote> <pre><code class="language-java">DecimalFormat df = new DecimalFormat("#.00"); System.out.println(df.format(.1));//.10 System.out.println(df.format(.123));//.12 System.out.println(df.format(1.126));//1.13 System.out.println(df.format(1.125));//1.12   这个没有四舍五入，idea亲测结果值 System.out.println(df.format(.125));//.12 System.out.println(df.format(.126));//.13</code></pre> <p><strong>&nbsp;</strong></p> <hr/> <p><strong>项目中用到了这个格式“#.00”,简单介绍下这个符号的区别：</strong></p> <p><strong>#：</strong></p> <p><strong>在<span style="color:#fe2c24;">整数位</span>时表示该位没有数字时也保持一致，如上例子&nbsp; .123=&gt; .12，有则直接显示；</strong></p> <p><strong>在<span style="color:#fe2c24;">小数位</span>时表示n个#只保留n位有效小数(比如 #.##&nbsp; 1.00不保留=&gt; 1，1.11则保留=&gt;1.11)&nbsp;</strong></p> <h3><strong><span style="background-color:#d7d8d9;">这里有个特殊情况：#.##的格式下：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; .100 =&gt; 0.1,这个整数位补了0</span></strong></h3> <p><strong>0： 表示该位没有数字时补零显示，有则直接显示；出现在小数位部分时，n个0表示保留n位小数</strong></p> <p>&nbsp;</p> <pre><code class="language-java">DecimalFormat df = new DecimalFormat("0.00"); System.out.println(df.format(.1));//0.10 System.out.println(df.format(.123));//0.12 System.out.println(df.format(1.126));//1.13 System.out.println(df.format(1.125));//1.12   这个没有四舍五入，idea亲测结果值 System.out.println(df.format(.125));//0.12 System.out.println(df.format(.126));//0.13</code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-58900.htm">猫疫苗三针间隔时间（猫疫苗三针间隔时间多久）</a></p>
+                                        <p>下一个：<a href="/news/article-59442.htm">开一个宠物零食工厂多少钱 开一个宠物零食工厂多少钱啊</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-52217.htm" title="Carson带你学设计模式：单例模式（Singleton）">Carson带你学设计模式：单例模式（Singleton）</a></li>
+                        <li class="py-2"><a href="/news/article-27707.htm" title="家猫为啥不建议打疫苗针（宠物猫为什么不建议打狂犬疫苗）">家猫为啥不建议打疫苗针（宠物猫为什么不建议打狂犬疫苗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-24-free-node-subscribe-links.htm" title="Verge Github节点订阅每天更新19.6M/S免费节点订阅链接">Verge Github节点订阅每天更新19.6M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-12-node-share.htm" title="「2月12日」每日订阅更新，19.5M/S高速SSR/V2ray/Clash/Shadowrocket/Clash Verge免费节点链接分享">「2月12日」每日订阅更新，19.5M/S高速SSR/V2ray/Clash/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-55494.htm" title="上海2020年宠物领养活动有哪些项目呢（上海宠物领养救助基地是真的吗）">上海2020年宠物领养活动有哪些项目呢（上海宠物领养救助基地是真的吗）</a></li>
+                        <li class="py-2"><a href="/news/article-46623.htm" title="美妙的红色报春花">美妙的红色报春花</a></li>
+                        <li class="py-2"><a href="/news/article-51177.htm" title="LeetCode 5436.一维数组的动态和(C++)">LeetCode 5436.一维数组的动态和(C++)</a></li>
+                        <li class="py-2"><a href="/news/article-39171.htm" title="58同城宠物狗狗出售,比熊（二手比熊犬哪里有卖的）">58同城宠物狗狗出售,比熊（二手比熊犬哪里有卖的）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-8-node-share-links.htm" title="「1月8日」每日订阅更新，22M/S高速Clash/SSR/V2ray/Shadowrocket/Clash Verge免费节点链接分享">「1月8日」每日订阅更新，22M/S高速Clash/SSR/V2ray/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-20-clash-verge-rev-node.htm" title="「1月20日」每日订阅更新，20.5M/S高速Clash/V2ray/Shadowrocket/SSR/Clash Verge免费节点链接分享">「1月20日」每日订阅更新，20.5M/S高速Clash/V2ray/Shadowrocket/SSR/Clash Verge免费节点链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">92</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
