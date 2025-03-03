@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-65393.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>uniapp封装request</title>
+        <meta name="description" content="uniapp封装request  在目录（根目录）创建文件夹，并且添加request.js 如图：    1.配置 request,js const BASE_URL = 'http://localh" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-65393.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="uniapp封装request" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/ac4186d343fbd233cdea0f7da96950ba.webp" />
+        <meta property="og:release_date" content="2025-03-01T07:00:06" />
+    <meta property="og:updated_time" content="2025-03-01T07:00:06" />
+        <meta property="og:description" content="uniapp封装request  在目录（根目录）创建文件夹，并且添加request.js 如图：    1.配置 request,js const BASE_URL = 'http://localh" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="uniapp封装request">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>uniapp封装request</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <h2> <a id="uniapprequest_0" rel="nofollow"></a>uniapp封装request</h2> <blockquote> <p>在目录（根目录）创建文件夹，并且添加request.js<br /> 如图：</p> </blockquote> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230118/205a0f45d4924ad2a87b10c09f70b0fe.jpg" alt="uniapp封装request"></p> <h2> <a id="1__requestjs_6" rel="nofollow"></a>1.配置 request,js</h2> <pre><code class="prism language-java"><span class="token keyword">const</span> BASE_URL <span class="token operator">=</span> 'http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token operator">:</span><span class="token number">9090</span>'  export <span class="token keyword">const</span> request <span class="token operator">=</span> <span class="token punctuation">(</span>options <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{<!-- --></span> 	<span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span>resolve<span class="token punctuation">,</span> reject<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{<!-- --></span> 		uni<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 			url<span class="token operator">:</span> BASE_URL <span class="token operator">+</span> options<span class="token punctuation">.</span>url<span class="token punctuation">,</span> 			method<span class="token operator">:</span> options<span class="token punctuation">.</span>method <span class="token operator">||</span> <span class="token char">'GET'</span><span class="token punctuation">,</span> 			header<span class="token operator">:</span> <span class="token punctuation">{<!-- --></span> 				token<span class="token operator">:</span> uni<span class="token punctuation">.</span><span class="token function">getStorageSync</span><span class="token punctuation">(</span><span class="token char">'user'</span><span class="token punctuation">)</span> <span class="token operator">?</span> uni<span class="token punctuation">.</span><span class="token function">getStorageSync</span><span class="token punctuation">(</span><span class="token char">'user'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>token <span class="token operator">:</span> '' 			<span class="token punctuation">}</span><span class="token punctuation">,</span> 			data<span class="token operator">:</span> options<span class="token punctuation">.</span>data <span class="token operator">||</span> <span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">,</span> 			success<span class="token operator">:</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{<!-- --></span> 				<span class="token keyword">const</span> data <span class="token operator">=</span> res<span class="token punctuation">.</span>data 				<span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span>code <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">51</span> <span class="token operator">||</span> data<span class="token punctuation">.</span>code <span class="token operator">==</span><span class="token operator">=</span> <span class="token number">52</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 					uni<span class="token punctuation">.</span><span class="token function">navigateTo</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 						url<span class="token operator">:</span> '<span class="token operator">/</span>pages<span class="token operator">/</span>login<span class="token operator">/</span>login' 					<span class="token punctuation">}</span><span class="token punctuation">)</span> 					<span class="token keyword">return</span> 				<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">.</span>code <span class="token operator">!=</span><span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> 					uni<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 						icon<span class="token operator">:</span><span class="token char">'error'</span><span class="token punctuation">,</span> 						title<span class="token operator">:</span><span class="token char">'操作错误'</span> 					<span class="token punctuation">}</span><span class="token punctuation">)</span> 				<span class="token punctuation">}</span> 				<span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> 			<span class="token punctuation">}</span><span class="token punctuation">,</span> 			fail<span class="token operator">:</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span> 				uni<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 					icon<span class="token operator">:</span><span class="token char">'error'</span><span class="token punctuation">,</span> 					title<span class="token operator">:</span><span class="token char">'系统错误'</span> 				<span class="token punctuation">}</span><span class="token punctuation">)</span> 				<span class="token function">reject</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> 			<span class="token punctuation">}</span> 		<span class="token punctuation">}</span><span class="token punctuation">)</span> 	<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>  </code></pre> <h2> <a id="2_jsmainjs_47" rel="nofollow"></a>2. 将这个js文件导入全局配置main.js中</h2> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230118/3f1d331a4609f9f92cc527d729ee6304.jpg" alt="uniapp封装request"></p> <blockquote> <p>代码如下：</p> </blockquote> <pre><code class="prism language-java"><span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span>request<span class="token punctuation">}</span> from <span class="token string">"./utils/request.js"</span><span class="token punctuation">;</span> <span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>request<span class="token operator">=</span>request </code></pre> <h2> <a id="3_57" rel="nofollow"></a>3.运用</h2> <blockquote> <p>例如在login中</p> </blockquote> <p>图中框框就是<img decoding="async" src="http://img.555519.xyz/uploads/20230118/0fd04acb26bd0915e104a64153798300.jpg" alt="uniapp封装request"></p> <h2> <a id="4_65" rel="nofollow"></a>4.对比原函数</h2> <pre><code class="prism language-java"><span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 				<span class="token comment">//校验表单</span> 				<span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>form<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res<span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span> 					<span class="token keyword">const</span> baseUrl<span class="token operator">=</span><span class="token string">"http://localhost:9090"</span> 					uni<span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 					url<span class="token operator">:</span>baseUrl<span class="token operator">+</span>'<span class="token operator">/</span>admin<span class="token operator">/</span>login'<span class="token punctuation">,</span> 					method<span class="token operator">:</span><span class="token string">"POST"</span><span class="token punctuation">,</span> 					data<span class="token operator">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>form<span class="token punctuation">,</span> 					success<span class="token operator">:</span> <span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{<!-- --></span> 						<span class="token keyword">const</span> data<span class="token operator">=</span>res<span class="token punctuation">.</span>data 						<span class="token keyword">if</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>code<span class="token operator">==</span><span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 							uni<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 								title<span class="token operator">:</span><span class="token char">'登录成功'</span> 							<span class="token punctuation">}</span><span class="token punctuation">)</span> 							<span class="token comment">//存储用户到session</span> 							uni<span class="token punctuation">.</span><span class="token function">setStorageSync</span><span class="token punctuation">(</span><span class="token char">'user'</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>data<span class="token punctuation">)</span> 							<span class="token comment">//跳转到首页</span> 							uni<span class="token punctuation">.</span><span class="token function">navigateTo</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 								url<span class="token operator">:</span>'<span class="token operator">/</span>pages<span class="token operator">/</span>index<span class="token operator">/</span>index' 							<span class="token punctuation">}</span><span class="token punctuation">)</span> 						<span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{<!-- --></span> 							uni<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 								icon<span class="token operator">:</span><span class="token string">"error"</span><span class="token punctuation">,</span> 								title<span class="token operator">:</span>data<span class="token punctuation">.</span>errormessage 							<span class="token punctuation">}</span><span class="token punctuation">)</span> 						<span class="token punctuation">}</span> 					<span class="token punctuation">}</span> 				<span class="token punctuation">}</span><span class="token punctuation">)</span> 				<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err <span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span> 					uni<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 						icon<span class="token operator">:</span><span class="token string">"error"</span><span class="token punctuation">,</span> 						title<span class="token operator">:</span><span class="token string">"表单校验失败"</span> 					<span class="token punctuation">}</span><span class="token punctuation">)</span> 				<span class="token punctuation">}</span><span class="token punctuation">)</span> 			<span class="token punctuation">}</span> 		 </code></pre> <h2> <a id="_107" rel="nofollow"></a>附录：改造后的代码应用</h2> <pre><code class="prism language-java"><span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 				<span class="token comment">//校验表单</span> 				<span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>form<span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res<span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span> 					<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">request</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>url<span class="token operator">:</span>'<span class="token operator">/</span>admin<span class="token operator">/</span>login'<span class="token punctuation">,</span>method<span class="token operator">:</span><span class="token string">"POST"</span><span class="token punctuation">,</span>data<span class="token operator">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>form<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res<span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span> 						<span class="token keyword">if</span><span class="token punctuation">(</span>res<span class="token punctuation">.</span>code<span class="token operator">==</span><span class="token operator">=</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span> 							uni<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 								title<span class="token operator">:</span><span class="token char">'登录成功'</span> 							<span class="token punctuation">}</span><span class="token punctuation">)</span> 							<span class="token comment">//存储用户到session</span> 							uni<span class="token punctuation">.</span><span class="token function">setStorageSync</span><span class="token punctuation">(</span><span class="token char">'user'</span><span class="token punctuation">,</span>res<span class="token punctuation">.</span>data<span class="token punctuation">)</span> 							<span class="token comment">//跳转到首页</span> 							uni<span class="token punctuation">.</span><span class="token function">navigateTo</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 								url<span class="token operator">:</span>'<span class="token operator">/</span>pages<span class="token operator">/</span>index<span class="token operator">/</span>index' 							<span class="token punctuation">}</span><span class="token punctuation">)</span> 						<span class="token punctuation">}</span> 					<span class="token punctuation">}</span><span class="token punctuation">)</span> 				<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span>err <span class="token operator">=</span><span class="token operator">&gt;</span><span class="token punctuation">{<!-- --></span> 					uni<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span> 						icon<span class="token operator">:</span><span class="token string">"error"</span><span class="token punctuation">,</span> 						title<span class="token operator">:</span><span class="token string">"表单校验失败"</span> 					<span class="token punctuation">}</span><span class="token punctuation">)</span> 				<span class="token punctuation">}</span><span class="token punctuation">)</span> 			<span class="token punctuation">}</span> 		 </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-64785.htm">给动物医院的好评模板范文（给宠物医院的好评一百字）</a></p>
+                                        <p>下一个：<a href="/news/article-65394.htm">发放动物疫苗简报 发放动物疫苗简报范文</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-1-free-subscribe-node.htm" title="「3月1日」每日订阅更新，20.6M/S高速SSR/V2ray/Clash/Shadowrocket/Clash Verge免费节点链接分享">「3月1日」每日订阅更新，20.6M/S高速SSR/V2ray/Clash/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-21756.htm" title="SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案">SpringBoot获取数据库datetime类型数据在前端显示为时间戳问题及解决方案</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-9-clash-verge-rev-node-github.htm" title="「1月9日」每日订阅更新，19.3M/S高速Clash/V2ray/SSR/Shadowrocket/Clash Verge免费节点链接分享">「1月9日」每日订阅更新，19.3M/S高速Clash/V2ray/SSR/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-26783.htm" title="兽药原料价格网（兽药原料价格上涨）">兽药原料价格网（兽药原料价格上涨）</a></li>
+                        <li class="py-2"><a href="/news/article-35749.htm" title="宠物医院大众点评评语怎么写（宠物医院优质点评）">宠物医院大众点评评语怎么写（宠物医院优质点评）</a></li>
+                        <li class="py-2"><a href="/news/article-38689.htm" title="动物注射疫苗的流程图解视频（动物疫苗注射器视频）">动物注射疫苗的流程图解视频（动物疫苗注射器视频）</a></li>
+                        <li class="py-2"><a href="/news/article-39171.htm" title="58同城宠物狗狗出售,比熊（二手比熊犬哪里有卖的）">58同城宠物狗狗出售,比熊（二手比熊犬哪里有卖的）</a></li>
+                        <li class="py-2"><a href="/news/article-43160.htm" title="开宠物店需要干什么（开宠物店需要准备什么?）">开宠物店需要干什么（开宠物店需要准备什么?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-9-node-share-links.htm" title="Verge Github节点订阅每天更新19.1M/S免费节点订阅链接">Verge Github节点订阅每天更新19.1M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-58899.htm" title="美联众合动物医院招聘信息 美联众合动物医院总部电话">美联众合动物医院招聘信息 美联众合动物医院总部电话</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">86</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>

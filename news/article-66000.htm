@@ -1,0 +1,241 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-66000.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>maven生成war包的两种方式</title>
+        <meta name="description" content="&nbsp;&nbsp;&nbsp; war包即对WEB应用程序进行打包，用于应用容器的部署。如在jboss中只要把war包丢入deploy目录下即可发布自己的应用了。打包方式有很多中，很多工具本身就" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-66000.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="maven生成war包的两种方式" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/326c8530582e5fd4e00c719177f7764f.webp" />
+        <meta property="og:release_date" content="2025-03-02T09:38:49" />
+    <meta property="og:updated_time" content="2025-03-02T09:38:49" />
+        <meta property="og:description" content="&nbsp;&nbsp;&nbsp; war包即对WEB应用程序进行打包，用于应用容器的部署。如在jboss中只要把war包丢入deploy目录下即可发布自己的应用了。打包方式有很多中，很多工具本身就" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="maven生成war包的两种方式">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>maven生成war包的两种方式</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>&nbsp;&nbsp;&nbsp; war包即对WEB应用程序进行打包，用于应用容器的部署。如在jboss中只要把war包丢入deploy目录下即可发布自己的应用了。打包方式有很多中，很多工具本身就支持此功能。下面主要介绍通过maven来操作的两种方式：</p> <p><strong>方法一：</strong></p> <p>&nbsp;&nbsp; 即第一反应的那种啦，就是利用maven的maven-war-plugin。</p> <pre class="xml">&lt;build&gt;    &lt;plugins&gt;    ......     &lt;plugin&gt;        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;        &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;        &lt;version&gt;2.0.2&lt;/version&gt;        &lt;configuration&gt;           &lt;warSourceExcludes&gt;WEB-INF/lib/log4j-${log4j.version}.jar&lt;/warSourceExcludes&gt;        &lt;/configuration&gt;     &lt;/plugin&gt;    &lt;/plugins&gt;  &lt;/build&gt;</pre> <p>当然你可以指定war包的名称，输出的目录，webapp目录等等。</p> <p>可以在需要打包的工程中直接设定：&lt;pom&gt;war&lt;/pom&gt;</p> <p>这样在install的时候就会对此工程生成相应配置的war包，原来此web工程依赖的其他工程全部会以jar包的形式出现在lib目录下，所以不需要再去关心war包中集成的jar包是否完整，maven已经帮你做完了。</p> <p>顺便提一句，在jboss中发布war包，如果包中包含log4j.jar，会报错，所以在本例中将此jar包排除在外。</p> <p><strong>方法二：</strong></p> <p>不用war插件，而是用到另外三个插件：maven-dependency-plugin 、maven-antrun-plugin&nbsp;、 build-helper-maven-plugin</p> <p>下面分别说明下着三个插件在此过程扮演的角色：</p> <p>maven-dependency-plugin ：相当于数据收集器，该依赖那些jar包，该加载那些resource信息。</p> <p>maven-antrun-plugin：完成收集完文件夹的压缩和包的重命名。</p> <p>build-helper-maven-plugin：让压缩包拥有男人本色，oh sorry 是war本色。</p> <p>在写pom.xml配置前，先说明下目录结构</p> <p>root</p> <p>|</p> <p>|---template</p> <p>|</p> <p>|---wardir</p> <p>其中这两个目录都作为maven的独立工程，下面要写配置在wardir下的pom.xml中</p> <pre class="xml">&lt;build&gt;    &lt;plugins&gt;       &lt;plugin&gt;         &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;         &lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;         &lt;version&gt;2.0&lt;/version&gt;         &lt;executions&gt;            &lt;execution&gt;               &lt;id&gt;create-structure&lt;/id&gt;               &lt;phase&gt;process-resources&lt;/phase&gt;                &lt;goals&gt;                    &lt;goal&gt;unpack&lt;/goal&gt;                 &lt;/goals&gt;                 &lt;configuration&gt;                     &lt;artifactItems&gt;                        &lt;artifactItem&gt;                           &lt;groupId&gt;GROUPID&lt;/groupId&gt;                            &lt;artifactId&gt;template&lt;/artifactId&gt;                        &lt;/artifactItem&gt;                  &lt;/artifactItems&gt;                  &lt;outputDirectory&gt;                      ${project.build.directory}/${assembly.name}.war                   &lt;/outputDirectory&gt;                 &lt;/configuration&gt;              &lt;/execution&gt;              &lt;execution&gt;                  &lt;id&gt;copy-libs&lt;/id&gt;                   &lt;phase&gt;process-resources&lt;/phase&gt;                    &lt;goals&gt;                       &lt;goal&gt;copy&lt;/goal&gt;                    &lt;/goals&gt;                    &lt;configuration&gt;                       &lt;artifactItems&gt;                          &lt;artifactItem&gt;                              &lt;groupId&gt;jdom&lt;/groupId&gt;                               &lt;artifactId&gt;jdom&lt;/artifactId&gt;                           &lt;/artifactItem&gt;                                 ......                        &lt;/artifactItems&gt;                          &lt;outputDirectory&gt;${project.build.directory}/${assembly.name}.war/WEB-INF/lib&lt;/outputDirectory&gt;                     &lt;/configuration&gt;                  &lt;/execution&gt;             &lt;/executions&gt;        &lt;/plugin&gt;         &lt;plugin&gt;             &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;             &lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;             &lt;version&gt;1.3&lt;/version&gt;             &lt;executions&gt;                &lt;execution&gt;                   &lt;id&gt;copy-config&lt;/id&gt;                   &lt;phase&gt;process-resources&lt;/phase&gt;                   &lt;goals&gt;                       &lt;goal&gt;run&lt;/goal&gt;                    &lt;/goals&gt;                    &lt;configuration&gt;                    &lt;tasks&gt;                        &lt;copy todir="${project.build.directory}/${assembly.name}.war"&gt;                            &lt;fileset dir="src/main/resources" /&gt;                        &lt;/copy&gt;                        &lt;zip destfile="${project.build.directory}/${assembly.name}-${project.version}-war.zip"&gt;                             &lt;zipfileset dir="${project.build.directory}/${assembly.name}.war" includes="**\*.*"  excludes="*.zip" /&gt;                        &lt;/zip&gt;                        &lt;copy file="${project.build.directory}/${assembly.name}-${project.version}-war.zip"                                     tofile="${project.build.directory}/${assembly.name}-${project.version}.war" /&gt;                      &lt;/tasks&gt;                      &lt;/configuration&gt;                 &lt;/execution&gt;             &lt;/executions&gt;        &lt;/plugin&gt;        &lt;plugin&gt;            &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;            &lt;artifactId&gt;build-helper-maven-plugin&lt;/artifactId&gt;            &lt;version&gt;1.4&lt;/version&gt;            &lt;executions&gt;               &lt;execution&gt;               &lt;id&gt;attach-artifacts&lt;/id&gt;               &lt;phase&gt;package&lt;/phase&gt;                  &lt;goals&gt;                      &lt;goal&gt;attach-artifact&lt;/goal&gt;                  &lt;/goals&gt;                  &lt;configuration&gt;                       &lt;artifacts&gt;                          &lt;artifact&gt;                              &lt;file&gt;${project.build.directory}/${assembly.name}-${project.version}.war&lt;/file&gt;                               &lt;type&gt;war&lt;/type&gt;                           &lt;/artifact&gt;                        &lt;/artifacts&gt;                   &lt;/configuration&gt;                &lt;/execution&gt;             &lt;/executions&gt;          &lt;/plugin&gt;     &lt;/plugins&gt; &lt;/build&gt;</pre> <p>&nbsp;当然这种方式也可以用来打ear包。对于打无页面操作系统的war包，个人认为用后者更灵活，当然建立假web工程，再依赖工程，通过第一种方式同样可以达到最终的结果。看个人喜好了。</p> <p>结束语：maven真的很强大！</p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-65394.htm">发放动物疫苗简报 发放动物疫苗简报范文</a></p>
+                                        <p>下一个：<a href="/news/article-66001.htm">动物疫苗价格查询表最新（动物接种疫苗多少钱）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-21755.htm" title="关于Postman调试@RequestBody入参模式接口的用例说明">关于Postman调试@RequestBody入参模式接口的用例说明</a></li>
+                        <li class="py-2"><a href="/news/article-42157.htm" title="宠物诊所申请动物诊疗许可证流程及费用（宠物诊所申请动物诊疗许可证流程及费用多少）">宠物诊所申请动物诊疗许可证流程及费用（宠物诊所申请动物诊疗许可证流程及费用多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-29-latest-clash-verge-rev-node.htm" title="「1月29日」每日订阅更新，21.3M/S高速Shadowrocket/Clash/V2ray/SSR/Clash Verge免费节点链接分享">「1月29日」每日订阅更新，21.3M/S高速Shadowrocket/Clash/V2ray/SSR/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-12-free-high-speed-nodes.htm" title="Verge Github节点订阅每天更新22.3M/S免费节点订阅链接">Verge Github节点订阅每天更新22.3M/S免费节点订阅链接</a></li>
+                        <li class="py-2"><a href="/news/article-66001.htm" title="动物疫苗价格查询表最新（动物接种疫苗多少钱）">动物疫苗价格查询表最新（动物接种疫苗多少钱）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-6-clash-verge-rev-node-github.htm" title="「1月6日」每日订阅更新，19.6M/S高速V2ray/SSR/Shadowrocket/Clash/Clash Verge免费节点链接分享">「1月6日」每日订阅更新，19.6M/S高速V2ray/SSR/Shadowrocket/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-28-clash-verge-rev-node-github.htm" title="「2月28日」每日订阅更新，20.4M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享">「2月28日」每日订阅更新，20.4M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-31373.htm" title="南京领养宠物的地方在哪里呀电话（南京领养宠物的地方在哪里呀电话多少）">南京领养宠物的地方在哪里呀电话（南京领养宠物的地方在哪里呀电话多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-13-node-share.htm" title="「1月13日」每日订阅更新，22M/S高速SSR/V2ray/Shadowrocket/Clash/Clash Verge免费节点链接分享">「1月13日」每日订阅更新，22M/S高速SSR/V2ray/Shadowrocket/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-27-clash-verge-rev-node.htm" title="「1月27日」每日订阅更新，18.6M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享">「1月27日」每日订阅更新，18.6M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">86</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
