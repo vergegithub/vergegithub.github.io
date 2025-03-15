@@ -1,0 +1,238 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-74454.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>k8s入门之Ingress</title>
+        <meta name="description" content="Ingress 的功能其实很容易理解：所谓 Ingress，就是 Service 的“Service”，代理不同后端 Service 而设置的负载均衡服务。  一、安装ingress 1.查找ingr" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-74454.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="k8s入门之Ingress" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/ac4186d343fbd233cdea0f7da96950ba.webp" />
+        <meta property="og:release_date" content="2025-03-15T07:21:03" />
+    <meta property="og:updated_time" content="2025-03-15T07:21:03" />
+        <meta property="og:description" content="Ingress 的功能其实很容易理解：所谓 Ingress，就是 Service 的“Service”，代理不同后端 Service 而设置的负载均衡服务。  一、安装ingress 1.查找ingr" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="k8s入门之Ingress">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>k8s入门之Ingress</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<p>Ingress 的功能其实很容易理解：所谓 Ingress，就是 Service 的“Service”，代理不同后端 Service 而设置的负载均衡服务。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/c7107b7b2a69bd8fd5f8dd82a8833fd9.jpg" alt="k8s入门之Ingress"></p> <p><strong>一、安装ingress</strong></p> <p><strong>1.查找ingress安装文件</strong></p> <p>从github上查看ingress对应k8s版本的deploy文件，链接地址是：</p> <p><a href="" rel="nofollow">https://github.com/kubernetes/ingress-nginx/tree/main/deploy/static/provider/baremetal</a></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/a203bb181f921646065634704a4ec434.jpg" alt="k8s入门之Ingress"></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/9fed87814f93b2e5dff754461d3ea446.jpg" alt="k8s入门之Ingress"></p> <p><strong>2.点击Raw按钮可得到该文件的url链接</strong></p> <p><a href="" rel="nofollow">https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/baremetal/1.21/deploy.yaml</a></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/eacc779d874a49e2e310fd64b588d910.jpg" alt="k8s入门之Ingress"></p> <p><strong>3.在master节点上下载该文件</strong></p> <pre><code>wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/baremetal/1.21/deploy.yaml</code></pre> <p><strong>4.更改文件名</strong></p> <pre><code>mv deploy.yaml ingress-nginx.yaml</code></pre> <p><strong>5.替换镜像</strong></p> <p>由于国内访问不了谷歌，需要更改ingress-nginx.yaml文件中的镜像，从docker hub上搜索相关镜像进行替换</p> <pre><code>k8s.gcr.io/ingress-nginx/controller:v1.1.2@sha256:28b11ce69e57843de44e3db6413e98d09de0f6688e33d4bd384002a44f7 8405c&nbsp;替换成&nbsp;liangjw/ingress-nginx-controller:v1.1.2  k8s.gcr.io/ingress-nginx/kube-webhook-certgen:v1.1.1@sha256:64d8c73dca984af206adf9d6d7e46aa550362b1d7a01f3a0a 91b20cc67868660 替换成 liangjw/kube-webhook-certgen:v1.1.1</code></pre> <p><strong>6.创建nginx ingress</strong></p> <pre><code>kubectl apply -f ingress-nginx.yaml</code></pre> <p><strong>7.查看资源</strong></p> <pre><code>kubectl get pod,svc -n ingress-nginx</code></pre> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/7ca5b9c610c4ba09450980f8aa8af89f.jpg" alt="k8s入门之Ingress"></p> <p><strong>8.在集群外通过集群内任意一台节点的IP+Port就可以访问</strong></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/4576588f3181b3d932255d812fb126b3.jpg" alt="k8s入门之Ingress"></p> <p>由于还没有配置被代理的服务，所以返回404</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/78014b7bf966a1eac04277bdd1de3146.jpg" alt="k8s入门之Ingress"></p> <p><strong>二、配置</strong></p> <p><strong>1.参考前面的章节部署nginx的deploy与service</strong></p> <p>服务名为：svc-nginx</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/3322eefc635189932cbc2e0898737a91.jpg" alt="k8s入门之Ingress"></p> <p><strong>2.配置ingress</strong></p> <p>创建ingress-svc.yaml文件</p> <pre><code>vi ingress-svc.yaml</code></pre> <p>编写文件内容</p> <pre><code>apiVersion: networking.k8s.io/v1 kind: Ingress metadata:   name: ingress-demo   # 名称空间不要忘了   namespace: dev spec:   ingressClassName: nginx   rules:   - host: "demo.k8s.com"     http:       paths:       - pathType: Prefix         path: "/"         backend:           service:             # 代理的服务名称             name: svc-nginx             port:               # 服务端口               number: 8000</code></pre> <p><strong>3.创建ingress对象</strong></p> <pre><code>kubectl apply -f ingress-svc.yaml</code></pre> <p><strong>4.查看ingress对象的信息</strong></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/cfb7e4a1218e8f5c2698bee3cbe337fb.jpg" alt="k8s入门之Ingress"></p> <p><strong>5.配置域名访问</strong></p> <p>在windows宿主机上找到hosts文件：</p> <p>C:\Windows\System32\drivers\etc\hosts，</p> <p>添加一条映射记录（从三台节点中任选一台的IP进行映射）：</p> <pre><code>192.168.59.112 demo.k8s.com</code></pre> <p>然后通过该域名加上ingress controller服务自己暴露的端口就可以访问了，千万要注意不是你代理的服务的端口。如下图所示获取ingress服务的端口</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/4425cc9c83d0b463ad028d48f2085c90.jpg" alt="k8s入门之Ingress"></p> <p>在浏览器就可以访问被ingress代理的k8s服务了</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/631322fbe973a9734ba12e08fc0d52a4.jpg" alt="k8s入门之Ingress"></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/72f3b2f85b970ff37d76682aaf4c7159.jpg" alt="k8s入门之Ingress"></p> <p><strong>三、路径重写</strong></p> <p><strong>1.更新yaml文件</strong></p> <pre><code>vi ingress-svc.yaml</code></pre> <pre><code>apiVersion: networking.k8s.io/v1 kind: Ingress metadata:   annotations:     # 加上此重写配置     nginx.ingress.kubernetes.io/rewrite-target: /$2   name: ingress-demo   namespace: dev spec:   ingressClassName: nginx   rules:   - host: "demo.k8s.com"     http:       paths:       - pathType: Prefix         path: "/"         backend:           service:             name: svc-nginx             port:               number: 8000   - host: "demo2.k8s.com"     http:       paths:       - pathType: Prefix         path: "/nginx(/|$)(.*)"         backend:           service:             name: svc-nginx             port:               number: 8000</code></pre> <p><strong>2.更新ingress对象</strong></p> <pre><code>kubectl apply -f ingress-svc.yaml</code></pre> <p><strong>3.查看ingress对象</strong></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/661f4a9b1f956a717d83e4b32f060be1.jpg" alt="k8s入门之Ingress"></p> <p><strong>4.配置域名</strong></p> <p>在windows宿主机上找到hosts文件：</p> <p>C:\Windows\System32\drivers\etc\hosts，添加一条映射记录：</p> <pre><code>192.168.59.112 demo2.k8s.com</code></pre> <p>在浏览器中访问</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/34cc23facda9e52b523360cd4e825557.jpg" alt="k8s入门之Ingress"></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/5545bcd0ad9b65745163b163ff9498da.jpg" alt="k8s入门之Ingress"></p> <p><strong>四、限流配置</strong></p> <p><strong>1.更新yaml文件</strong></p> <pre><code>vi ingress-svc.yaml</code></pre> <pre><code>apiVersion: networking.k8s.io/v1 kind: Ingress metadata:   annotations:     # 加上此重写配置     nginx.ingress.kubernetes.io/rewrite-target: /$2     # 限流     nginx.ingress.kubernetes.io/limit-rps: "1"   name: ingress-demo   namespace: dev spec:   ingressClassName: nginx   rules:   - host: "demo.k8s.com"     http:       paths:       - pathType: Prefix         path: "/"         backend:           service:             name: svc-nginx             port:               number: 8000   - host: "demo2.k8s.com"     http:       paths:       - pathType: Prefix         path: "/nginx(/|$)(.*)"         backend:           service:             name: svc-nginx             port:               number: 8000</code></pre> <p><strong>2.更新ingress对象</strong></p> <pre><code>kubectl apply -f ingress-svc.yaml</code></pre> <p><strong>3.测试</strong></p> <p>快速刷新访问会报异常，你可以自定义错误页面</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/603286db9a2d12523a15872a59ced1fe.jpg" alt="k8s入门之Ingress"></p> <p><strong>五、总结</strong></p> <p>目前，Ingress 只能工作在七层，而 Service 只能工作在四层。所以当你想要在 Kubernetes 里为应用进行 TLS 配置等 HTTP 相关的操作时，都必须通过 Ingress 来进行。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/e9373a4c1849e1f7d28adf4f2c866ce2.jpg" alt="k8s入门之Ingress"></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-73805.htm">国内十大知名狗粮品牌（国内好的狗粮品牌）</a></p>
+                                        <p>下一个：<a href="/news/article-74456.htm">宠物领养协议书范本最新图片大全高清（宠物领养协议简单版本）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-2-clash-verge-rev-node.htm" title="「2月2日」每日订阅更新，19.2M/S高速Clash/SSR/V2ray/Shadowrocket/Clash Verge免费节点链接分享">「2月2日」每日订阅更新，19.2M/S高速Clash/SSR/V2ray/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-53830.htm" title="木炭生产机器全套全自动（木炭生产机器 全套 全自动）">木炭生产机器全套全自动（木炭生产机器 全套 全自动）</a></li>
+                        <li class="py-2"><a href="/news/article-61771.htm" title="源码中的设计模式&#8211;单例模式">源码中的设计模式&#8211;单例模式</a></li>
+                        <li class="py-2"><a href="/news/article-44621.htm" title="动物疫苗厂家排名前十有哪些品种（动物疫苗公司排名）">动物疫苗厂家排名前十有哪些品种（动物疫苗公司排名）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-2-free-node-subscribe.htm" title="「3月2日」每日订阅更新，18.4M/S高速V2ray/Clash/Shadowrocket/SSR/Clash Verge免费节点链接分享">「3月2日」每日订阅更新，18.4M/S高速V2ray/Clash/Shadowrocket/SSR/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-43160.htm" title="开宠物店需要干什么（开宠物店需要准备什么?）">开宠物店需要干什么（开宠物店需要准备什么?）</a></li>
+                        <li class="py-2"><a href="/news/article-38212.htm" title="动物疫苗经营许可证 动物疫苗经营许可证怎么申请">动物疫苗经营许可证 动物疫苗经营许可证怎么申请</a></li>
+                        <li class="py-2"><a href="/news/article-68579.htm" title="SpringBoot 加入AOP后无法注入的解决办法">SpringBoot 加入AOP后无法注入的解决办法</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-clash-verge-rev-github.htm" title="「3月4日」每日订阅更新，22.6M/S高速Clash/V2ray/Shadowrocket/SSR/Clash Verge免费节点链接分享">「3月4日」每日订阅更新，22.6M/S高速Clash/V2ray/Shadowrocket/SSR/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-61179.htm" title="动物注射疫苗注意事项有哪些呢图片（动物疫苗注射方法）">动物注射疫苗注意事项有哪些呢图片（动物疫苗注射方法）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">44</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
