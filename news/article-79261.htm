@@ -1,0 +1,238 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-79261.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>编码练习：JavaScript 点击下拉列表显示相关信息</title>
+        <meta name="description" content="问题描述 点击下拉列表中的选项，加载选项对应的列表信息。 给定HTML： &lt;html&gt;  &lt;head&gt;  &lt;/head&gt;  &lt;body&gt; 	&lt;h1" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-79261.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="编码练习：JavaScript 点击下拉列表显示相关信息" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/afb7d18b0a5e8b182fda3868d398ad7b.webp" />
+        <meta property="og:release_date" content="2025-03-22T08:50:21" />
+    <meta property="og:updated_time" content="2025-03-22T08:50:21" />
+        <meta property="og:description" content="问题描述 点击下拉列表中的选项，加载选项对应的列表信息。 给定HTML： &lt;html&gt;  &lt;head&gt;  &lt;/head&gt;  &lt;body&gt; 	&lt;h1" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="编码练习：JavaScript 点击下拉列表显示相关信息">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>编码练习：JavaScript 点击下拉列表显示相关信息</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h2>问题描述</h2> <p>点击下拉列表中的选项，加载选项对应的列表信息。</p> <p>给定HTML：</p> <pre><code class="language-html">&lt;html&gt;  &lt;head&gt;  &lt;/head&gt;  &lt;body&gt; 	&lt;h1&gt;A few of the Game of Thrones characters&lt;/h1&gt; 	&lt;form&gt;   &lt;label for="house"&gt;House&lt;/label&gt;:   &lt;select name="house" id="house"&gt;       &lt;option value="" selected&gt;Select a house&lt;/option&gt;   &lt;/select&gt; 	&lt;/form&gt;    &lt;ul id="characters"&gt;&lt;/ul&gt;   &lt;/body&gt; &lt;/html&gt;</code></pre> <p>显示结果：</p> <p><img fetchpriority="high" decoding="async" alt="" height="210" src="http://img.555519.xyz/uploads/20230207/4802385e8ad905bb8ea4af942448b176.jpg"></p> <h2>&nbsp;解决方法</h2> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 我的：</p> <pre><code class="language-javascript">// Write your code here const houseElement = document.createElement("option"); houseElement.textContent = "Lannister"; houseElement.id = "Lannister"; houseElement.value="Lannister"; document.getElementById("house").appendChild(houseElement); document.getElementById("house").addEventListener("change",e=&gt;{     const ui1=document.createElement("li");     ui1.textContent="Tywin";        const ui2=document.createElement("li");     ui2.textContent="Cersei";     const ui3=document.createElement("li");     ui3.textContent="Jaime";     let ui4=document.createElement("li");     ui4.textContent="Tyrion";      if(e.target.value === "Lannister")     {         document.getElementById("characters").appendChild(ui1);         document.getElementById("characters").appendChild(ui2);         document.getElementById("characters").appendChild(ui3);         document.getElementById("characters").appendChild(ui4);     } });</code></pre> <p>显示效果：</p> <p><img decoding="async" alt="" height="205" src="http://img.555519.xyz/uploads/20230207/28f4bc72f420bf2e74c765cd4a0adc6d.jpg"></p> <p>&nbsp;选中这个选项会加载下面的选项</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 参考答案：</p> <pre><code class="language-javascript">/* Game of Thrones characters */  // Character list. Each house has a name and a code const houses = [   {     code: "ST",     name: "Stark"   },   {     code: "LA",     name: "Lannister"   },   {     code: "BA",     name: "Baratheon"   },   {     code: "TA",     name: "Targaryen"   } ];  // Return an array of characters belonging to a house const getCharacters = houseCode =&gt; {   switch (houseCode) {     case "ST":       return ["Eddard", "Catelyn", "Robb", "Sansa", "Arya", "Jon Snow"];     case "LA":       return ["Tywin", "Cersei", "Jaime", "Tyrion"];     case "BA":       return ["Robert", "Stannis", "Renly"];     case "TA":       return ["Aerys", "Daenerys", "Viserys"];     default:       return []; // Empty array   } };  // Create and return an HTML &lt;option&gt; tag const createOptionElement = (text, value) =&gt; {   const element = document.createElement("option");   element.textContent = text;   element.value = value;   return element; };  // Create and return and HTML &lt;li&gt; tag const createLiElement = text =&gt; {   const element = document.createElement("li");   element.textContent = text;   return element; };  const houseElement = document.querySelector("select");  // Fill the house list houses.forEach(house =&gt; {   houseElement.appendChild(createOptionElement(house.name, house.code)); });  // Handle house change event houseElement.addEventListener("change", e =&gt; {   // The value of the event target is the house code   const characters = getCharacters(e.target.value);   const characterElement = document.getElementById("characters");   // Empty the list   characterElement.innerHTML = "";   // Add each character to the list   characters.forEach(character =&gt; {     characterElement.appendChild(createLiElement(character));   }); });</code></pre> <p>效果：</p> <p><img decoding="async" alt="" height="197" src="http://img.555519.xyz/uploads/20230207/9bbc57e06d720987f36ad40eda7407fd.jpg"></p> <p>&nbsp;<img loading="lazy" decoding="async" alt="" height="239" src="http://img.555519.xyz/uploads/20230207/1f165fe0d215d298314014a9af838089.jpg"></p> <p>&nbsp;</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-78568.htm">重庆在哪里可以领养猫咪呢（重庆有领养宠物狗或猫的吗）</a></p>
+                                        <p>下一个：<a href="/news/article-79262.htm">拼多多无货源网店是真的吗不会被骗吗（拼多多无货源网店合法吗）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-13-free-subscribe-node.htm" title="「3月13日」每日订阅更新，18.8M/S高速V2ray/Shadowrocket/SSR/Clash/Clash Verge免费节点链接分享">「3月13日」每日订阅更新，18.8M/S高速V2ray/Shadowrocket/SSR/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-44147.htm" title="和田宠物市场电话多少（和田卖宠物的地方）">和田宠物市场电话多少（和田卖宠物的地方）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-8-node-share-links.htm" title="「2月8日」每日订阅更新，19.2M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享">「2月8日」每日订阅更新，19.2M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-54379.htm" title="厦门宠物领养中心在哪个位置好（厦门宠物领养中心在哪个位置好呢）">厦门宠物领养中心在哪个位置好（厦门宠物领养中心在哪个位置好呢）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-today-clash-verge-rev-node.htm" title="「3月17日」每日订阅更新，19.4M/S高速Shadowrocket/Clash/SSR/V2ray/Clash Verge免费节点链接分享">「3月17日」每日订阅更新，19.4M/S高速Shadowrocket/Clash/SSR/V2ray/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-18-node-share-links.htm" title="「2月18日」每日订阅更新，19.3M/S高速V2ray/SSR/Shadowrocket/Clash/Clash Verge免费节点链接分享">「2月18日」每日订阅更新，19.3M/S高速V2ray/SSR/Shadowrocket/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-19-free-clash-verge-rev-node.htm" title="「1月19日」每日订阅更新，18.2M/S高速Shadowrocket/V2ray/SSR/Clash/Clash Verge免费节点链接分享">「1月19日」每日订阅更新，18.2M/S高速Shadowrocket/V2ray/SSR/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-clash-verge-rev-windows.htm" title="「3月7日」每日订阅更新，19.3M/S高速Shadowrocket/Clash/SSR/V2ray/Clash Verge免费节点链接分享">「3月7日」每日订阅更新，19.3M/S高速Shadowrocket/Clash/SSR/V2ray/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-46124.htm" title="动物医院仪器有哪些牌子 动物医院仪器有哪些牌子的">动物医院仪器有哪些牌子 动物医院仪器有哪些牌子的</a></li>
+                        <li class="py-2"><a href="/news/article-46123.htm" title="狗粮品牌都有哪些名字（狗粮品牌名称）">狗粮品牌都有哪些名字（狗粮品牌名称）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">71</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
