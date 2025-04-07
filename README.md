@@ -1,4 +1,4 @@
-# 「4月3日」每日订阅更新，20.4M/S高速SSR/Clash/V2ray/Shadowrocket/Clash Verge免费节点链接分享  更新时间 2025-04-03 08:44:49
+# 「4月7日」每日订阅更新，19.6M/S高速Clash/V2ray/SSR/Shadowrocket/Clash Verge免费节点链接分享  更新时间 2025-04-07 10:20:03
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vergegithub.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://vergegithub.github.io/uploads/2025/04/0-20250403.yaml
-- https://vergegithub.github.io/uploads/2025/04/1-20250403.yaml
-- https://vergegithub.github.io/uploads/2025/04/2-20250403.yaml
-- https://vergegithub.github.io/uploads/2025/04/3-20250403.yaml
-- https://vergegithub.github.io/uploads/2025/04/4-20250403.yaml
+- https://vergegithub.github.io/uploads/2025/04/0-20250407.yaml
+- https://vergegithub.github.io/uploads/2025/04/1-20250407.yaml
+- https://vergegithub.github.io/uploads/2025/04/2-20250407.yaml
+- https://vergegithub.github.io/uploads/2025/04/3-20250407.yaml
+- https://vergegithub.github.io/uploads/2025/04/4-20250407.yaml
 
 ### V2ray订阅链接
 
-- https://vergegithub.github.io/uploads/2025/04/0-20250403.txt
-- https://vergegithub.github.io/uploads/2025/04/1-20250403.txt
-- https://vergegithub.github.io/uploads/2025/04/2-20250403.txt
-- https://vergegithub.github.io/uploads/2025/04/3-20250403.txt
-- https://vergegithub.github.io/uploads/2025/04/4-20250403.txt
+- https://vergegithub.github.io/uploads/2025/04/0-20250407.txt
+- https://vergegithub.github.io/uploads/2025/04/1-20250407.txt
+- https://vergegithub.github.io/uploads/2025/04/2-20250407.txt
+- https://vergegithub.github.io/uploads/2025/04/3-20250407.txt
+- https://vergegithub.github.io/uploads/2025/04/4-20250407.txt
 
 ### Sing-box订阅链接
 
-- https://vergegithub.github.io/uploads/2025/04/20250403.json
+- https://vergegithub.github.io/uploads/2025/04/20250407.json
 
 ## 更多clash节点订阅 ：
 
