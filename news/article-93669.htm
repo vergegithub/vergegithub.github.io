@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-93669.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>设置feign配置日志级别</title>
+        <meta name="description" content="设置feign配置日志级别 基于《&lt;spring-cloud.version&gt;Greenwich.RC2&lt;/spring-cloud.version&gt;》 根据spring cl" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-93669.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="设置feign配置日志级别" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/1d4f00dd2ab007c30331423e4677cfeb.webp" />
+        <meta property="og:release_date" content="2025-04-11T08:58:31" />
+    <meta property="og:updated_time" content="2025-04-11T08:58:31" />
+        <meta property="og:description" content="设置feign配置日志级别 基于《&lt;spring-cloud.version&gt;Greenwich.RC2&lt;/spring-cloud.version&gt;》 根据spring cl" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="设置feign配置日志级别">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>设置feign配置日志级别</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-dracula"> <h2><a id="feign_2" rel="nofollow"></a>设置feign配置日志级别</h2> <p><em>基于《&lt;spring-cloud.version&gt;Greenwich.RC2&lt;/spring-cloud.version&gt;》</em></p> <p>根据spring cloud文档:<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://cloud.spring.io/spring-cloud-static/Greenwich.RC2/single/spring-cloud.html#_feign_logging"  rel="nofollow">https://cloud.spring.io/spring-cloud-static/Greenwich.RC2/single/spring-cloud.html#_feign_logging</a></p> <h3><a id="feign_12" rel="nofollow"></a>feign日志</h3> <p>在创建feign client的时候，就创建了logger, 默认logger的名称是创建feign client的服务接口类的全路径，通俗的来讲就是加了<code>@FeignClient</code>接口类的全路径</p> <p>首先在<code>application.yml</code>文件中指定日志级别:</p> <pre><code class="prism language-yml"><span class="token key atrule">logging</span><span class="token punctuation">:</span><span class="token key atrule">level</span><span class="token punctuation">:</span><span class="token key atrule">com.**.api.service.IFeignService</span><span class="token punctuation">:</span> DEBUG</code></pre> <h3><a id="_25" rel="nofollow"></a>设置日志记录的级别</h3> <p>logger有四种类型:<code>NONE</code>,<code>BASIC</code>,<code>HEADERS</code>,<code>FULL</code>,通过注册Bean来设置日志记录级别:</p> <pre><code class="prism language-java"><span class="token annotation punctuation">@Configuration</span><span class="token keyword">public</span><span class="token keyword">class</span><span class="token class-name">LogConfiguration</span><span class="token punctuation">{<!-- --></span><span class="token annotation punctuation">@Bean</span>     Logger<span class="token punctuation">.</span>Level<span class="token function">feignLoggerLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span><span class="token keyword">return</span> Logger<span class="token punctuation">.</span>Level<span class="token punctuation">.</span>FULL<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span></code></pre> <p>在feign client加上：</p> <pre><code class="prism language-java"><span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"IFeignService"</span><span class="token punctuation">,</span> configuration<span class="token operator">=</span> LogConfiguration<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token keyword">public</span><span class="token keyword">interface</span><span class="token class-name">IFeignService</span><span class="token punctuation">{<!-- --></span><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value<span class="token operator">=</span><span class="token string">"/index"</span><span class="token punctuation">,</span> method<span class="token operator">=</span> RequestMethod<span class="token punctuation">.</span>GET<span class="token punctuation">)</span><span class="token keyword">public</span> String<span class="token function">invokeSayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre> <p>日志记录结果:</p> <pre><code class="prism language-console">2018-12-31    c.g.v.f.c.api.service.IFeignService  &lt;--- HTTP/1.1 200 (462ms) 2018-12-31    c.g.v.f.c.api.service.IFeignService  content-length: 5 2018-12-31    c.g.v.f.c.api.service.IFeignService  content-type: text/plain;charset=UTF-8 2018-12-31    c.g.v.f.c.api.service.IFeignService  date: Mon, 31 Dec 2018 13:35:48 GMT 2018-12-31    c.g.v.f.c.api.service.IFeignService  2018-12-31    c.g.v.f.c.api.service.IFeignService  index 2018-12-31    c.g.v.f.c.api.service.IFeignService  &lt;--- END HTTP (5-byte body)</code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-92916.htm">猫粮制作过程视频 猫粮制作过程视频播放</a></p>
+                                        <p>下一个：<a href="/news/article-93673.htm">正规领养宠物流程图表大全（领养宠物需要什么条件和手续2021）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-node-share.htm" title="「3月18日」每日订阅更新，20.2M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享">「3月18日」每日订阅更新，20.2M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-94471.htm" title="宠爱国际动物医疗中心地址（宠爱国际动物医院地址）">宠爱国际动物医疗中心地址（宠爱国际动物医院地址）</a></li>
+                        <li class="py-2"><a href="/news/article-92915.htm" title="宠物粮食加工厂设备哪的好（宠物粮加工机器）">宠物粮食加工厂设备哪的好（宠物粮加工机器）</a></li>
+                        <li class="py-2"><a href="/news/article-80654.htm" title="厦门宠物寄养哪里好 厦门宠物寄养哪里好点">厦门宠物寄养哪里好 厦门宠物寄养哪里好点</a></li>
+                        <li class="py-2"><a href="/news/article-92204.htm" title="福建农林动物医学学院（福建农林大学动物医学院）">福建农林动物医学学院（福建农林大学动物医学院）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-clash-verge-rev-nodes.htm" title="「3月25日」每日订阅更新，18.9M/S高速Shadowrocket/Clash/SSR/V2ray/Clash Verge免费节点链接分享">「3月25日」每日订阅更新，18.9M/S高速Shadowrocket/Clash/SSR/V2ray/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-67896.htm" title="农业大学动物医院门诊时间 农业大学动物医院预约挂号">农业大学动物医院门诊时间 农业大学动物医院预约挂号</a></li>
+                        <li class="py-2"><a href="/news/article-69849.htm" title="SpringCloud第二季5-SpringConfig、Bus">SpringCloud第二季5-SpringConfig、Bus</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-11-free-high-speed-nodes.htm" title="「4月11日」每日订阅更新，22.6M/S高速SSR/Clash/Shadowrocket/V2ray/Clash Verge免费节点链接分享">「4月11日」每日订阅更新，22.6M/S高速SSR/Clash/Shadowrocket/V2ray/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-87027.htm" title="动物医院的号码是多少（动物医院在哪）">动物医院的号码是多少（动物医院在哪）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">36</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
