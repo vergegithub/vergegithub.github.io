@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-95961.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SpringBoot导入导出数据</title>
+        <meta name="description" content="今天给大家带来的是一个 SpringBoot导入导出数据  首先我们先创建项目 注意：创建SpringBoot项目时一定要联网不然会报错 项目创建好后我们首先对 application.yml 进行编" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-95961.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="SpringBoot导入导出数据" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/bbe021ebc4ac84156c193885f931cd6c.webp" />
+        <meta property="og:release_date" content="2025-04-14T08:04:14" />
+    <meta property="og:updated_time" content="2025-04-14T08:04:14" />
+        <meta property="og:description" content="今天给大家带来的是一个 SpringBoot导入导出数据  首先我们先创建项目 注意：创建SpringBoot项目时一定要联网不然会报错 项目创建好后我们首先对 application.yml 进行编" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SpringBoot导入导出数据">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>SpringBoot导入导出数据</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>今天给大家带来的是一个 <strong>SpringBoot导入导出数据</strong></p> <hr/> <p>首先我们先创建项目 <strong>注意：创建SpringBoot项目时一定要联网不然会报错</strong><img fetchpriority="high" decoding="async" alt="" height="678" src="http://img.555519.xyz/uploads/20221230/92f082aed2c0865b73aaa78c0bea0ccc.jpg"></p> <p>项目创建好后我们首先对 <strong>application.yml 进行编译</strong></p> <p><img decoding="async" alt="" height="101" src="http://img.555519.xyz/uploads/20221230/7f6dd89af4dfa78ec0a21683ccf32d89.jpg"></p> <pre><code>server:   port: 8081  # mysql spring:   datasource:     driver-class-name: com.mysql.cj.jdbc.Driver     url: jdbc:mysql://127.0.0.1:3306/dvd?characterEncoding=utf-8&amp;&amp;severTimezone=utc     username: root     password: root    thymeleaf:     mode: HTML5     cache: false     suffix: .html     prefix: classpath:/  mybatis:   mapperLocations: classpath:mapper/**/*.xml   configuration:     map-underscore-to-camel-case: true  pagehelper:   helper-dialect: mysql   offset-as-page-num: true   params: count=countSql   reasonable: true   row-bounds-with-count: true   support-methods-arguments: true</code></pre> <p><strong>注意：在 ：后一定要空格，这是他的语法，不空格就会运行报错</strong></p> <p>接下来我们进行对项目的构建 <strong>创建好如下几个包</strong><strong> </strong>可根据自己实际需要创建其他的工具包之类的</p> <p><img decoding="async" alt="" height="182" src="http://img.555519.xyz/uploads/20221230/2f73aaeda28e8b0b834fe81406833093.jpg"></p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mapper：用于存放dao层接口</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pojo：用于存放实体类</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;service：用于存放service层接口，以及service层实现类</p> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; controller：用于存放controller控制层&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p> <hr/> <p>接下来我们开始编写代码</p> <p>首先是实体类</p> <pre><code class="language-java">package com.bdqn.springbootexcel.pojo;  import lombok.Data;  import java.io.Serializable; import java.util.List;  @Data public class ExcelData implements Serializable{      //文件名称     private String fileName;     //表头数据     private String[] head;     //数据     private List&lt;String[]&gt; data;  } </code></pre> <p>&nbsp;然后是service层</p> <pre><code class="language-java">package com.bdqn.springbootexcel.service;  import com.bdqn.springbootexcel.pojo.User; import org.apache.ibatis.annotations.Select;  import javax.servlet.http.HttpServletResponse; import java.util.List;  public interface ExcelService {      Boolean exportExcel(HttpServletResponse response, String fileName, Integer pageNum, Integer pageSize);      Boolean importExcel(String fileName);      List&lt;User&gt; find(); } </code></pre> <pre><code class="language-java">package com.bdqn.springbootexcel.service;  import com.bdqn.springbootexcel.mapper.UserMapper; import com.bdqn.springbootexcel.pojo.ExcelData; import com.bdqn.springbootexcel.pojo.User; import com.bdqn.springbootexcel.util.ExcelUtil; import lombok.extern.slf4j.Slf4j; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.stereotype.Service;  import javax.servlet.http.HttpServletResponse; import java.util.ArrayList; import java.util.List;  @Slf4j @Service public class ExcelServiceImpl implements ExcelService {      @Autowired     private UserMapper userMapper;      @Override     public Boolean exportExcel(HttpServletResponse response, String fileName, Integer pageNum, Integer pageSize) {         log.info("导出数据开始。。。。。。");         //查询数据并赋值给ExcelData         List&lt;User&gt; userList = userMapper.find();         List&lt;String[]&gt; list = new ArrayList&lt;String[]&gt;();         for (User user : userList) {             String[] arrs = new String[userList.size()];             arrs[0] = String.valueOf(user.getId());             arrs[1] = String.valueOf(user.getName());             arrs[2] = String.valueOf(user.getAge());             arrs[3] = String.valueOf(user.getSex());             list.add(arrs);         }         //表头赋值         String[] head = {"序列", "名字", "年龄", "性别"};         ExcelData data = new ExcelData();         data.setHead(head);         data.setData(list);         data.setFileName(fileName);         //实现导出         try {             ExcelUtil.exportExcel(response, data);             log.info("导出数据结束。。。。。。");             return true;         } catch (Exception e) {             log.info("导出数据失败。。。。。。");             return false;         }     }      @Override     public Boolean importExcel(String fileName) {         log.info("导入数据开始。。。。。。");         try {             List&lt;Object[]&gt; list = ExcelUtil.importExcel(fileName);             System.out.println(list.toString());             for (int i = 0; i &lt; list.size(); i++) {                 User user = new User();                 user.setName((String) list.get(i)[0]);                 user.setAge((String) list.get(i)[1]);                 user.setSex((String) list.get(i)[2]);                 userMapper.add(user);             }             log.info("导入数据结束。。。。。。");             return true;         } catch (Exception e) {             log.info("导入数据失败。。。。。。");             e.printStackTrace();         }         return false;     }      @Override     public List&lt;User&gt; find() {         return userMapper.find();     } } </code></pre> <p>工具类</p> <pre><code class="language-java">package com.bdqn.springbootexcel.util;  import com.bdqn.springbootexcel.pojo.ExcelData; import com.bdqn.springbootexcel.pojo.User; import lombok.extern.slf4j.Slf4j; import org.apache.poi.hssf.usermodel.*; import org.apache.poi.ss.usermodel.*;  import javax.servlet.http.HttpServletResponse; import java.io.BufferedOutputStream; import java.io.FileInputStream; import java.io.InputStream; import java.io.OutputStream; import java.util.ArrayList; import java.util.List;  import static org.apache.poi.ss.usermodel.CellType.*;  @Slf4j public class ExcelUtil {     public static void exportExcel(HttpServletResponse response, ExcelData data) {         log.info("导出解析开始，fileName:{}",data.getFileName());         try {             //实例化HSSFWorkbook             HSSFWorkbook workbook = new HSSFWorkbook();             //创建一个Excel表单，参数为sheet的名字             HSSFSheet sheet = workbook.createSheet("sheet");             //设置表头             setTitle(workbook, sheet, data.getHead());             //设置单元格并赋值             setData(sheet, data.getData());             //设置浏览器下载             setBrowser(response, workbook, data.getFileName());             log.info("导出解析成功!");         } catch (Exception e) {             log.info("导出解析失败!");             e.printStackTrace();         }     }      private static void setTitle(HSSFWorkbook workbook, HSSFSheet sheet, String[] str) {         try {             HSSFRow row = sheet.createRow(0);             //设置列宽，setColumnWidth的第二个参数要乘以256，这个参数的单位是1/256个字符宽度             for (int i = 0; i &lt;= str.length; i++) {                 sheet.setColumnWidth(i, 15 * 256);             }             //设置为居中加粗,格式化时间格式             HSSFCellStyle style = workbook.createCellStyle();             HSSFFont font = workbook.createFont();             font.setBold(true);             style.setFont(font);             style.setDataFormat(HSSFDataFormat.getBuiltinFormat("m/d/yy h:mm"));             //创建表头名称             HSSFCell cell;             for (int j = 0; j &lt; str.length; j++) {                 cell = row.createCell(j);                 cell.setCellValue(str[j]);                 cell.setCellStyle(style);             }         } catch (Exception e) {             log.info("导出时设置表头失败！");             e.printStackTrace();         }     }      private static void setData(HSSFSheet sheet, List&lt;String[]&gt; data) {         try{             int rowNum = 1;             for (int i = 0; i &lt; data.size(); i++) {                 HSSFRow row = sheet.createRow(rowNum);                 for (int j = 0; j &lt; data.get(i).length; j++) {                     row.createCell(j).setCellValue(data.get(i)[j]);                 }                 rowNum++;             }             log.info("表格赋值成功！");         }catch (Exception e){             log.info("表格赋值失败！");             e.printStackTrace();         }     }      private static void setBrowser(HttpServletResponse response, HSSFWorkbook workbook, String fileName) {         try {             //清空response             response.reset();             //设置response的Header             response.addHeader("Content-Disposition", "attachment;filename=" + fileName);             OutputStream os = new BufferedOutputStream(response.getOutputStream());             response.setContentType("application/vnd.ms-excel;charset=gb2312");             //将excel写入到输出流中             workbook.write(os);             os.flush();             os.close();             log.info("设置浏览器下载成功！");         } catch (Exception e) {             log.info("设置浏览器下载失败！");             e.printStackTrace();         }      }      public static List&lt;Object[]&gt; importExcel(String fileName) {         log.info("导入解析开始，fileName:{}",fileName);         try {             List&lt;Object[]&gt; list = new ArrayList&lt;&gt;();             InputStream inputStream = new FileInputStream(fileName);             Workbook workbook = WorkbookFactory.create(inputStream);             Sheet sheet = workbook.getSheetAt(0);             //获取sheet的行数             int rows = sheet.getPhysicalNumberOfRows();             for (int i = 0; i &lt; rows; i++) {                 //过滤表头行                 if (i == 0) {                     continue;                 }                 //获取当前行的数据                 Row row = sheet.getRow(i);                 Object[] objects = new Object[row.getPhysicalNumberOfCells()];                 int index = 0;                 for (Cell cell : row) {                     if (cell.getCellType().equals(NUMERIC)) {                         objects[index] = (int) cell.getNumericCellValue();                     }                     if (cell.getCellType().equals(STRING)) {                         objects[index] = cell.getStringCellValue();                     }                     if (cell.getCellType().equals(BOOLEAN)) {                         objects[index] = cell.getBooleanCellValue();                     }                     if (cell.getCellType().equals(ERROR)) {                         objects[index] = cell.getErrorCellValue();                     }                     index++;                 }                 list.add(objects);             }             log.info("导入文件解析成功！");             return list;         }catch (Exception e){             log.info("导入文件解析失败！");             e.printStackTrace();         }         return null;     }      //测试导入     public static void main(String[] args) {         try {             String fileName = "G:/test.xlsx";             List&lt;Object[]&gt; list = importExcel(fileName);             for (int i = 0; i &lt; list.size(); i++) {                 User user = new User();                 user.setName((String) list.get(i)[0]);                 user.setAge((String) list.get(i)[1]);                 user.setSex((String) list.get(i)[2]);                 System.out.println(user.toString());             }         } catch (Exception e) {             e.printStackTrace();         }     }  } </code></pre> <p>最后是controller层</p> <pre><code class="language-java">package com.bdqn.springbootexcel.controller;  import com.bdqn.springbootexcel.pojo.User; import com.bdqn.springbootexcel.service.ExcelService; import lombok.extern.slf4j.Slf4j; import org.springframework.beans.factory.annotation.Autowired; import org.springframework.web.bind.annotation.GetMapping; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.ResponseBody; import org.springframework.web.bind.annotation.RestController;  import javax.servlet.http.HttpServletResponse; import java.util.List;  @Slf4j @RestController public class ExcelController {      @Autowired     private ExcelService excelService;      @GetMapping("/export")     public String exportExcel(HttpServletResponse response, String fileName, Integer pageNum, Integer pageSize) {         fileName = "test.xlsx";         if (fileName == null || "".equals(fileName)) {             return "文件名不能为空！";         } else {             if (fileName.endsWith("xls") || fileName.endsWith("xlsx")) {                 Boolean isOk = excelService.exportExcel(response, fileName, 1, 10);                 if (isOk) {                     return "导出成功！";                 } else {                     return "导出失败！";                 }             }             return "文件格式有误！";         }     }      @GetMapping("/import")     public String importExcel(String fileName) {         fileName = "G:/test.xlsx";         if (fileName == null &amp;&amp; "".equals(fileName)) {             return "文件名不能为空！";         } else {             if (fileName.endsWith("xls") || fileName.endsWith("xlsx")) {                 Boolean isOk = excelService.importExcel(fileName);                 if (isOk) {                     return "导入成功！";                 } else {                     return "导入失败！";                 }             }             return "文件格式错误！";         }     }      //饼状图的数据查询     //@ResponseBody     @RequestMapping("/pojos_bing")     public List&lt;User&gt; gotoIndex() {         List&lt;User&gt; pojos = excelService.find();         return pojos;     }  } </code></pre> <hr/> <p>到现在为止我们的后端代码就已经完全搞定了，前端页面如下</p> <p>写了一个简单前端用于测试</p> <p>index.html</p> <pre><code class="language-java">&lt;!DOCTYPE html&gt; &lt;html lang="en" xmlns:th="http://www.thymeleaf.org"&gt; &lt;html lang="en"&gt; &lt;head&gt;     &lt;meta charset="UTF-8"&gt;     &lt;title&gt;Title&lt;/title&gt; &lt;/head&gt; &lt;body&gt;     &lt;div align="center"&gt;         &lt;a th:href="@{'/export'}"&gt;导出&lt;/a&gt;         &lt;a th:href="@{'/import'}"&gt;导入&lt;/a&gt;     &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;</code></pre> <p>当我们点击导出按钮时浏览器会自动下载</p> <p>当我们点击导入按钮时会往数据库中添加表格数据</p> <hr/> <p><strong>今天给大家带来的就是这些内容，感谢观看！</strong></p> <p><strong>有问题可以在评论区指正，我会及时修改！</strong></p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-95205.htm">被猫咬出血了一定要打针吗打几针疫苗（被猫咬出血需要打几针疫苗）</a></p>
+                                        <p>下一个：<a href="/news/article-95962.htm">宠物粮行业分析论文题目怎么写的（宠物粮行业环境分析）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-77191.htm" title="Spring @Scheduled 任务 参数动态配置">Spring @Scheduled 任务 参数动态配置</a></li>
+                        <li class="py-2"><a href="/news/article-71157.htm" title="免费领养狗狗正规网站平台深圳有哪些 免费领养狗狗正规网站平台深圳有哪些">免费领养狗狗正规网站平台深圳有哪些 免费领养狗狗正规网站平台深圳有哪些</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-9-clash-verge-rev-node.htm" title="「4月9日」每日订阅更新，21.3M/S高速Clash/SSR/V2ray/Shadowrocket/Clash Verge免费节点链接分享">「4月9日」每日订阅更新，21.3M/S高速Clash/SSR/V2ray/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-85577.htm" title="在Java的数字字面量中使用下划线">在Java的数字字面量中使用下划线</a></li>
+                        <li class="py-2"><a href="/news/article-73805.htm" title="国内十大知名狗粮品牌（国内好的狗粮品牌）">国内十大知名狗粮品牌（国内好的狗粮品牌）</a></li>
+                        <li class="py-2"><a href="/news/article-75828.htm" title="狗粮加工厂需要什么手续办理（狗粮加工厂需要哪些证件）">狗粮加工厂需要什么手续办理（狗粮加工厂需要哪些证件）</a></li>
+                        <li class="py-2"><a href="/news/article-71155.htm" title="动物诊疗机构办理动物诊疗许可证需要多久 动物诊疗机构办理动物诊疗许可证需要多久">动物诊疗机构办理动物诊疗许可证需要多久 动物诊疗机构办理动物诊疗许可证需要多久</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-clash-verge-rev-windows.htm" title="「3月7日」每日订阅更新，19.3M/S高速Shadowrocket/Clash/SSR/V2ray/Clash Verge免费节点链接分享">「3月7日」每日订阅更新，19.3M/S高速Shadowrocket/Clash/SSR/V2ray/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-72472.htm" title="沈阳华仪仪表制造有限公司怎么样啊(沈阳华仪仪表制造有限公司怎么样呀)">沈阳华仪仪表制造有限公司怎么样啊(沈阳华仪仪表制造有限公司怎么样呀)</a></li>
+                        <li class="py-2"><a href="/news/article-96686.htm" title="使用 Java 开发 Gradle 插件_在线工具">使用 Java 开发 Gradle 插件_在线工具</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
