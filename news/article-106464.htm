@@ -1,0 +1,239 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-106464.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Infrastructure 知识: dnf对module的处理</title>
+        <meta name="description" content="从RHEL8/CentOS8开始，dnf取代yum作为rpm 包管理工具。与之而来的还有模块（module）这个东西。 有了它们的加持，让在同一个OS上安装不同版本的软件或者开发语言的工作比之前容易多" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-106464.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="Infrastructure 知识: dnf对module的处理" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/dcc493068322c2e62abe350eaa74e53d.webp" />
+        <meta property="og:release_date" content="2025-04-28T09:48:26" />
+    <meta property="og:updated_time" content="2025-04-28T09:48:26" />
+        <meta property="og:description" content="从RHEL8/CentOS8开始，dnf取代yum作为rpm 包管理工具。与之而来的还有模块（module）这个东西。 有了它们的加持，让在同一个OS上安装不同版本的软件或者开发语言的工作比之前容易多" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Infrastructure 知识: dnf对module的处理">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Infrastructure 知识: dnf对module的处理</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				</h1> <p>从RHEL8/CentOS8开始，dnf取代yum作为rpm 包管理工具。与之而来的还有模块（module）这个东西。 有了它们的加持，让在同一个OS上安装不同版本的软件或者开发语言的工作比之前容易多了。</p> </h1> <p><strong>Modules</strong>&nbsp;are special package groups usually representing an application, a language runtime, or a set of tools. They are available in one or<strong>multiple streams</strong>&nbsp;which usually represent a major version of a piece of software, giving you an option to choose what versions of packages you want to consume.</p> <p>To simplify installation, modules usually define one or more<strong>installation profiles</strong>&nbsp;that represent a specific use case. For example a<code>server</code>&nbsp;or a<code>client</code>&nbsp;profile in a database module.</p> <p>也就是说：</p> <p>一个软件可以有多个版本，每个版本对应一个stream. 在每个stream内部，又分为proile对应到安装场景（比如开发， server， client）。</p> <h2 id="实际dnf使用中的要点"><strong>实际dnf使用中的要点</strong></h2> <p>如果module有多个stream(版本)，会有一个是默认的, 在dnf命令输出里面在stream name后用[d]表示</p> <p>如果某个stream有多个profiles, 会有一个默认的，在dnf命令输出里面在profile name后用[d]表示</p> </h1> <p>语法</p> <pre><code class="language-csharp">    $ dnf module install NAME     $ dnf module install NAME:STREAM     $ dnf module install NAME/PROFILE     $ dnf module install NAME:STREAM/PROFILE</code></pre> </h1> <pre><code class="language-csharp">$ sudo dnf module list nginx Red Hat Enterprise Linux 8 for x86_64 - AppStream (RPMs) Name                     Stream                      Profiles                      Summary                           nginx                    1.14 [d]                    common [d]                    nginx webserver                   nginx                    1.16                        common [d]                    nginx webserver                   nginx                    1.18                        common [d]                    nginx webserver                   nginx                    1.20                        common [d]                    nginx webserver                    Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled</code></pre> <p><strong>解读output：</strong></p> <p>nginx module 有4个stream(对应4个版本），默认安装的是1.14，1.14这个stream只有一个profile “common”, 它也是默认安装的profile</p> </h1> <pre><code class="language-csharp">$ dnf module list --installed Name      Stream       Profiles                                   Summary                                                        nodejs    14 [e]       common [d] [i], development, minimal, s2i  Javascript runtime                                             python39  3.9 [d][e]   build, common [d] [i]                      Python programming language, version 3.9                        Hint: [d]efault, [e]nabled, [x]disabled, [i]nstalled</code></pre> <p><code>dnf module list --installed</code> 显示已经安装的module</p> <p><strong>查看输出 nodejs这一行表示：</strong></p> <p><code>14 [e]:</code> 表示14这个版本(stream)已经启用了，用[e]表示. 这里[e]就肯定说明已经安装了</p> <p><code>common [d] [i], development, minimal, s2i</code>  : 共4个profiles： common, devleopment, mininal, s2i。 其中common 是默认的Profile,用[d]表示，而且它已经安装在本机了，用[i]表示</p> <p><strong>查看输出 python39这一行表示：</strong></p> <p>3.9 [d] [3]: 3.9这个版本(stream)是这个module的缺省版本，用[d]表示；而且是已经启用了，用[e]表示。 这里[e]就肯定说明已经安装了</p> </h1> <p>https://docs.fedoraproject.org/en-US/modularity/using-modules/</p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-106463.htm">vue3.0 elementUI实现上传文件的暂停继续功能</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-87028.htm" title="美联众合动物医院介绍（美联众合动物医院在哪里）">美联众合动物医院介绍（美联众合动物医院在哪里）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-15-clash-verge-rev-nodes.htm" title="「4月15日」每日订阅更新，18.2M/S高速V2ray/SSR/Shadowrocket/Clash/Clash Verge免费节点链接分享">「4月15日」每日订阅更新，18.2M/S高速V2ray/SSR/Shadowrocket/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-75165.htm" title="猫三针疫苗要多少钱一针呀（猫猫的三针疫苗多少钱）">猫三针疫苗要多少钱一针呀（猫猫的三针疫苗多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-80653.htm" title="动物医院大众点评评语大全集怎么写（动物医院好评）">动物医院大众点评评语大全集怎么写（动物医院好评）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-17-free-node-subscribe.htm" title="「4月17日」每日订阅更新，21.5M/S高速Clash/V2ray/Shadowrocket/SSR/Clash Verge免费节点链接分享">「4月17日」每日订阅更新，21.5M/S高速Clash/V2ray/Shadowrocket/SSR/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-69214.htm" title="猫三联一共几针多少钱多久打一次好（猫三联大概多少钱一针）">猫三联一共几针多少钱多久打一次好（猫三联大概多少钱一针）</a></li>
+                        <li class="py-2"><a href="/news/article-86303.htm" title="宠物粮食价格高对策论文（宠物粮食问题）">宠物粮食价格高对策论文（宠物粮食问题）</a></li>
+                        <li class="py-2"><a href="/news/article-100380.htm" title="动物医院仪器设备清单表格（动物医院实验室常见设备仪器）">动物医院仪器设备清单表格（动物医院实验室常见设备仪器）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-23-clash-verge-rev-node-github.htm" title="「3月23日」每日订阅更新，19.5M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享">「3月23日」每日订阅更新，19.5M/S高速SSR/Shadowrocket/V2ray/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-66645.htm" title="上海2020年宠物领养活动时间是多少天（上海2020年宠物领养活动时间是多少天啊）">上海2020年宠物领养活动时间是多少天（上海2020年宠物领养活动时间是多少天啊）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>

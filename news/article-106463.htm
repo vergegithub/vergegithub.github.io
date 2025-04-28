@@ -1,0 +1,240 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-106463.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>vue3.0 elementUI实现上传文件的暂停继续功能</title>
+        <meta name="description" content="uploadList.vue &lt;template&gt;   &lt;div class="uploader-list"&gt;       &lt;ul v-if="fileList.leng" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-106463.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="vue3.0 elementUI实现上传文件的暂停继续功能" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/82e3d48fd39791813fe7a4bfa58a13e5.webp" />
+        <meta property="og:release_date" content="2025-04-28T09:48:26" />
+    <meta property="og:updated_time" content="2025-04-28T09:48:26" />
+        <meta property="og:description" content="uploadList.vue &lt;template&gt;   &lt;div class="uploader-list"&gt;       &lt;ul v-if="fileList.leng" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue3.0 elementUI实现上传文件的暂停继续功能">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>vue3.0 elementUI实现上传文件的暂停继续功能</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <p>uploadList.vue</p> <pre><code>&lt;template&gt;   &lt;div class="uploader-list"&gt;       &lt;ul v-if="fileList.length&gt;0"&gt;         &lt;li v-for="file in fileList" :key="file.id"&gt;           &lt;div class="fileItem"&gt;             &lt;span&gt;{<!-- -->{file.name.length&gt;30?file.name.substring(0,30)+'...':file.name}}({<!-- -->{commonFun.getFileSize(file.size)}})-{<!-- -->{(file.status=='ready'&amp;&amp;Number(file.percentage)&gt;0)?status.stop:status[file.status]}}               &lt;span v-if="file.status=='uploading'||file.status=='ready'"&gt;({<!-- -->{Number(file.percentage).toFixed(1)}}%)&lt;/span&gt;             &lt;/span&gt;             &lt;svg-icon icon-class="stop" @click="stopUpload(file)" v-if="file.status=='uploading'"/&gt;             &lt;i class="el-icon-caret-right" @click="startUpload(file)" v-if="file.status=='ready'||file.status=='stop'"&gt;&lt;/i&gt;             &lt;i class="el-icon-close" @click="delUpload(file)" style="color:#f56c6c"&gt;&lt;/i&gt;           &lt;/div&gt;           &lt;el-progress style="width:440px;" :width="440" :percentage="file.percentage"&gt;&lt;span&gt;{<!-- -->{Number(file.percentage).toFixed(1)}}%&lt;/span&gt;&lt;/el-progress&gt;         &lt;/li&gt;       &lt;/ul&gt;   &lt;/div&gt; &lt;/template&gt;  &lt;script&gt; import { toRefs,reactive,watchEffect,getCurrentInstance } from 'vue'; import { useI18n } from 'vue-i18n'//要在js中使用国际化   export default {     name: "uploadList",     props: {         fileList:Array,     },      emits:["stopUploadFile","uploadFileFun"],     setup(props,ctx) {       const { t } = useI18n();       const {proxy} = getCurrentInstance();       const commonFun = proxy.$fun;       const state = reactive({         files:[],         stopUpload(file){           ctx.emit('stopUploadFile',file,'stop')           },         startUpload(file){           ctx.emit('uploadFileFun',file)         },         delUpload(file){           ctx.emit('stopUploadFile',file,'del')           },       })       let status={         ready:t("personal.page_myspace_wait_upload"),         stop:t("common.constants_stopped"),         uploading:t("personal.page_myspace_uploading"),         success:t("common.constants_uploaded"),       }       watchEffect(()=&gt;{         state.files = props.fileList       })       return{         ...toRefs(state),         status,         commonFun       }     }   } &lt;/script&gt;  &lt;style lang="scss"&gt;      .uploader-list {     position: relative;   }   .uploader-list &gt; ul {     list-style: none;     margin: 0;     padding: 0;     padding-bottom: 20px;     li{       width: 490px;       margin: auto;       height: 50px;       border-bottom: 1px solid #cdcdcd;       background: #FFF;       .fileItem{         line-height: 30px;         font-size: 14px;       }     }   } &lt;/style&gt;</code></pre> <p>将上传列表单独创建一个uploadList.vue</p> <p>上传组件</p> <pre><code>&lt;!-- 上传文件 --&gt; 		&lt;div class="file-panel" :class="showPercentage ? 'showPercentage' : 'hidePercentage'"&gt; 			&lt;el-card class="panelCard"&gt; 				&lt;template #header&gt; 				&lt;div class="card-header"&gt; 					&lt;span&gt;文件列表&lt;/span&gt; 					&lt;div&gt; 						&lt;i style="color:#409EFF" @click="showPercentageFun(false)" v-if="showPercentage" class="el-icon-minus" &gt;&lt;/i&gt; 						&lt;i style="color:#409EFF" @click="showPercentageFun(true)" v-else class="el-icon-full-screen"&gt;&lt;/i&gt; 					&lt;/div&gt; 				&lt;/div&gt; 				&lt;/template&gt; 				&lt;upload-list v-if="showPercentage" @stopUploadFile="stopUploadFile" @uploadFileFun="uploadFileFun" :fileList="uploadFileList"&gt;&lt;/upload-list&gt; 			&lt;/el-card&gt; 		&lt;/div&gt; 		&lt;el-dialog 			:title="$t('common.constants_add_file')" 			v-model="layout.upload" 			width="600px" 			custom-class="qrCodeDialog" 			&gt; 			&lt;el-upload  				ref="upload" 				style="text-align:center;" 				class="upload-demo" 				:action="UploadUrl()" 				multiple 				drag 				:auto-upload="false" 				name="modelfile" 				:file-list="uploadFileList" 				:show-file-list="false" 				:data="{pfolderid:pfolderid.pfolderid}" 				:on-change="fileChange" 				:on-progress="fileProgress" 				:on-success="uploadSuccess" 			&gt; 				&lt;i class="el-icon-upload"&gt;&lt;/i&gt; 				&lt;div class="el-upload__text"&gt;{<!-- -->{$t("common.constants_drop_file")}}&lt;em&gt;{<!-- -->{$t("common.constants_click_file")}}&lt;/em&gt;&lt;/div&gt; 			&lt;/el-upload&gt; 			&lt;ul v-if="uploadFileList1.length&gt;0" class="el-upload-list el-upload-list--text"&gt; 				&lt;li v-for="item of uploadFileList1" :key="item.uid" class="el-upload-list__item is-ready" tabindex="0"&gt;&lt;!--v-if--&gt; 					&lt;a class="el-upload-list__item-name"&gt;&lt;i class="el-icon-document"&gt;&lt;/i&gt;{<!-- -->{item.name}}&lt;/a&gt; 					&lt;label class="el-upload-list__item-status-label"&gt; 						&lt;i class="el-icon-upload-success el-icon-circle-check"&gt;&lt;/i&gt; 					&lt;/label&gt;&lt;i class="el-icon-close"&gt;&lt;/i&gt; 				&lt;/li&gt; 			&lt;/ul&gt; 			&lt;!-- &lt;el-progress v-if="uploadPercentage&gt;0" :percentage="uploadPercentage" color="#409eff" /&gt; --&gt; 			&lt;template #footer&gt; 				&lt;span class="dialog-footer"&gt; 				&lt;el-button @click="layout.upload = false"&gt;{<!-- -->{$t("common.constants_close")}}&lt;/el-button&gt; 				&lt;el-button type="primary" @click="uploadFileFun"&gt;{<!-- -->{$t("common.constants_begin_upload")}}&lt;/el-button&gt; 				&lt;/span&gt; 			&lt;/template&gt; 		&lt;/el-dialog&gt;</code></pre> <p>具体方法</p> <pre><code>uploadSuccess (res) { 				var flag=true; 				var result=""; 				res.map(item =&gt; { 					if(item.return=='0'){ 						flag=true; 					}else{ 						flag=false; 						result=item.return; 					} 				}); 				if(flag){ 					ElMessage.success(t("common.constants_file_success")); 				}else{ 					ElMessage.warning(t(`common[${result}]`)); 				} 				state.layout.upload=false; 				stateFun.refresh(); 			}, 			// 文件上传 			uploadFun(){ 				state.pfolderid.pfolderid=state.file.folderid; 				uploadFileList1.value=[]; 				state.layout.upload=true; 			}, 			fileProgress(event, file,fileList){ 				uploadFileList.value=fileList; 				console.log(file) 			}, 			// 停止上传 			stopUploadFile(file,type){ 				if(type=='stop'){ 					upload.value.abort(file); 					uploadFileList.value.findIndex(item =&gt;{ 						if(item.uid==file.uid){ 							item.status="ready"; 							return true 						} 					}) 				}else{ 					var index = uploadFileList.value.findIndex(item =&gt;{ 						if(item.uid==file.uid){ 							return true 						} 					}) 					uploadFileList.value.splice(index,1) 				} 			}, 			//  			uploadFileFun(){ 				// if(file&amp;&amp;file.uid){ 				// 	uploadFileList.value.findIndex(item =&gt;{ 				// 		if(item.uid==file.uid){ 				// 			item.status="ready"; 				// 			item.percentage=0; 				// 			return true 				// 		} 				// 	}) 				// }else{ 					state.layout.upload=false; 				// } 				upload.value.submit(); 			}, 			UploadUrl() { 				return "/api/"+store.state.site.version+"/file/uploadfromweb" 			}, 			// 文件状态改变时的钩子 			fileChange(file,fileList) { 				uploadFileList1.value.push(file); 				uploadFileList.value=fileList; 				showPercentage.value=true; 			}, 			showPercentageFun(val){ 				showPercentage.value=val; 			},</code></pre> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-105680.htm">pip 查看要安装的包所有版本（所有包版本）</a></p>
+                                        <p>下一个：<a href="/news/article-106464.htm">Infrastructure 知识: dnf对module的处理</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-102573.htm" title="农大动物医院哪个医生好点（农大动物医院电话号码）">农大动物医院哪个医生好点（农大动物医院电话号码）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-2-latest-clash-verge-rev-node.htm" title="「4月2日」每日订阅更新，19.5M/S高速SSR/V2ray/Clash/Shadowrocket/Clash Verge免费节点链接分享">「4月2日」每日订阅更新，19.5M/S高速SSR/V2ray/Clash/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-69213.htm" title="三国杀所有技能详解（三国杀里面的技能是什么）">三国杀所有技能详解（三国杀里面的技能是什么）</a></li>
+                        <li class="py-2"><a href="/news/article-66000.htm" title="maven生成war包的两种方式">maven生成war包的两种方式</a></li>
+                        <li class="py-2"><a href="/news/article-67278.htm" title="Vue2.0中消除警告方法：eslint-plugin-vuefix">Vue2.0中消除警告方法：eslint-plugin-vuefix</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-latest-clash-verge-rev-node.htm" title="「4月13日」每日订阅更新，19M/S高速SSR/V2ray/Clash/Shadowrocket/Clash Verge免费节点链接分享">「4月13日」每日订阅更新，19M/S高速SSR/V2ray/Clash/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-89935.htm" title="上海地区宠物领养平台 上海地区宠物领养平台有哪些">上海地区宠物领养平台 上海地区宠物领养平台有哪些</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-clash-verge-rev-nodes.htm" title="「3月10日」每日订阅更新，21M/S高速V2ray/Shadowrocket/Clash/SSR/Clash Verge免费节点链接分享">「3月10日」每日订阅更新，21M/S高速V2ray/Shadowrocket/Clash/SSR/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-16-node-share-links.htm" title="「3月16日」每日订阅更新，20.4M/S高速SSR/Clash/Shadowrocket/V2ray/Clash Verge免费节点链接分享">「3月16日」每日订阅更新，20.4M/S高速SSR/Clash/Shadowrocket/V2ray/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-90833.htm" title="学宠物美容有前途吗男生多吗（学宠物美容有前途吗男生多吗还是女生）">学宠物美容有前途吗男生多吗（学宠物美容有前途吗男生多吗还是女生）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
