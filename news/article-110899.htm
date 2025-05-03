@@ -1,0 +1,240 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vergegithub.github.io/news/article-110899.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>分享C++三种类型new类型的运算符使用详情_C 语言_</title>
+        <meta name="description" content="目录  1.new操作符 2.::operator new  2.1原始调用 2.2重载1 2.3重载2  3.place new     1.new操作符 new operator，平时用的最多的n" />
+        <link rel="icon" href="/assets/website/img/vergegithub/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Verge Github免费机场订阅节点官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vergegithub.github.io/news/article-110899.htm" />
+    <meta property="og:site_name" content="Verge Github免费机场订阅节点官网" />
+    <meta property="og:title" content="分享C++三种类型new类型的运算符使用详情_C 语言_" />
+    <meta property="og:image" content="https://vergegithub.github.io/uploads/20241103/ac4186d343fbd233cdea0f7da96950ba.webp" />
+        <meta property="og:release_date" content="2025-05-03T10:30:08" />
+    <meta property="og:updated_time" content="2025-05-03T10:30:08" />
+        <meta property="og:description" content="目录  1.new操作符 2.::operator new  2.1原始调用 2.2重载1 2.3重载2  3.place new     1.new操作符 new operator，平时用的最多的n" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="分享C++三种类型new类型的运算符使用详情_C 语言_">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- css here -->
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/meanmenu.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/scrolltop.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/swiper.min.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/default.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/style.css">
+    <link rel="stylesheet" href="/assets/website/css/vergegithub/responsive.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCFC00Q4E1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VCFC00Q4E1');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- preloaders start -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <!-- preloaders end -->
+    <!-- header area start -->
+    <header>
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="container">
+                <div class="row">
+                    <!-- logo start -->
+                    <div class="col-md-4">
+                        <div class="header-logo">
+                            <a href="/">
+                                                                <span>Verge Github</span>
+                                                            </a>
+                        </div>
+                    </div>
+                    <!-- main menu area start -->
+                    <div class="col-md-8">
+                        <div class="main-menu-area float-right">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                                                                <li><a href="/">首页</a></li>
+                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                            </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="mobile-menu"></div>
+                    </div>
+                    <!-- main menu area end -->
+                </div>
+            </div>
+        </div>
+        <!-- header area end -->
+    </header>
+    <!-- header area end -->
+    <!-- main area start -->
+    <main>
+        <!-- breadcrumb area start -->
+        <div id="apork-breadcrumb-area" class="apork-breadcrumb-area text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>分享C++三种类型new类型的运算符使用详情_C 语言_</h1>
+                        <ul class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="/" title="首页">首页</a></li>
+                            <li class="breadcrumb-item"><a href="/news/" title="新闻资讯">新闻资讯</a></li>
+                            <li class="breadcrumb-item active">正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- breadcrumb area end -->
+        <!-- about area start -->
+        <div class="apork-about-area mt-230 mb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Verge Clash节点订阅官网" data-url="https://vergeclash.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li>1.new操作符</li> <li>2.::operator new</li> <ul class="second_class_ul"> <li>2.1原始调用</li> <li>2.2重载1</li> <li>2.3重载2</li> </ul> <li>3.place new</li> <ul class="second_class_ul"></ul> </ul> </div> <p class="maodian"></p> <h2>1.new操作符</h2> <p>new operator，平时用的最多的new操作符，其对应delete operator，不能被重载，其包含两个操作（既申请空间，又调用构造函数）</p> <ul> <li>（1）使用::operator new申请内存</li> <li>（2）调用类的构造函数</li> </ul> <div class="ay1code"> <pre class="brush:cpp;">class CTestUse  {  public:      CTestUse() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }      virtual ~CTestUse() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }     private:  };     void test()  {      string *pStr = new string("new operator");      cout &lt;&lt; *pStr &lt;&lt; endl;      delete pStr;         CTestUse *pCase = new CTestUse;      delete pCase;  }        int main(int argc, char *argv[])  {      test();         return 0;  }</pre> </div> <p><strong>运行结果如下：</strong></p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220414/713dc4f5ca9dfa5bc88bcb6c5af616eb.jpg"></p> <p class="maodian"></p> <h2>2.::operator new</h2> <p>::operator new，只会申请空间，不会调用构造函数，可以被重载，其对应 ::operator delete （只申请空间）</p> <p class="maodian"></p> <h3>2.1原始调用</h3> <div class="ay1code"> <pre class="brush:cpp;">class CTestUse1  {  public:      CTestUse1() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }      virtual ~CTestUse1() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }      void show() { cout &lt;&lt; __FILE__ &lt;&lt; " " &lt;&lt; __FUNCTION__ &lt;&lt; endl; }     private:  };        void test1()  {      CTestUse1 *pCase = (CTestUse1 *)::operator new (sizeof(CTestUse1));      pCase-&gt;show();      ::operator delete(pCase);     }     int main(int argc, char *argv[])  {      test1();         return 0;  }</pre> </div> <p><strong>运行结果如下：</strong></p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220414/5f43ea2abb7dd2f415fd4229cca2d518.jpg"></p> <p class="maodian"></p> <h3>2.2重载1</h3> <div class="ay1code"> <pre class="brush:cpp;">class CTestUse2  {  public:      CTestUse2() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }      virtual ~CTestUse2() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }      void show() { cout &lt;&lt; __FILE__ &lt;&lt; " " &lt;&lt; __FUNCTION__ &lt;&lt; endl; }         void* operator new(size_t size) {          cout &lt;&lt; __FUNCTION__ &lt;&lt; endl;          return ::operator new(size);      }         void operator delete(void* ptr) {          cout &lt;&lt; __FUNCTION__ &lt;&lt; endl;          ::operator delete(ptr);      }     private:  };     void test2()  {      CTestUse2 *pCase = new CTestUse2;      pCase-&gt;show();      delete pCase;     }     int main(int argc, char *argv[])  {      test2();         return 0;  }</pre> </div> <p><strong>运行结果如下：</strong></p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220414/ae23fdc189750486d00de468591f25f8.jpg"></p> <p class="maodian"></p> <h3>2.3重载2</h3> <div class="ay1code"> <pre class="brush:cpp;">class CTestUse3  {  public:      CTestUse3() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }      virtual ~CTestUse3() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }      void show() { cout &lt;&lt; __FILE__ &lt;&lt; " " &lt;&lt; __FUNCTION__ &lt;&lt; endl; }         void* operator new(size_t size, string str) {          cout &lt;&lt; __FUNCTION__ &lt;&lt; str &lt;&lt; endl;          return ::operator new(size);      }         void operator delete(void* ptr) {          cout &lt;&lt; __FUNCTION__ &lt;&lt; endl;          ::operator delete(ptr);      }     private:  };     void test3()  {      CTestUse3 *pCase = new ("heshiyang") CTestUse3;      pCase-&gt;show();      delete pCase;     }     int main(int argc, char *argv[])  {      test3();         return 0;  }</pre> </div> <p><strong>运行结果如下：</strong></p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220414/f876184aeef5bbcb088a5bda0f5d261c.jpg"></p> <p class="maodian"></p> <h2>3.place new</h2> <p>place new在已经构建好的内存中创建对象，其只会返回已经申请好的内存指针，多用在高性能场景下，提前申请好内存，可以节省申请内存开消 （只调用构造函数）</p> <div class="ay1code"> <pre class="brush:cpp;">class CTestUse4  {  public:      CTestUse4() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }      virtual ~CTestUse4() { cout &lt;&lt; __FUNCTION__ &lt;&lt; endl; }      void show() { cout &lt;&lt; __FILE__ &lt;&lt; " " &lt;&lt; __FUNCTION__ &lt;&lt; endl; }         void* operator new(size_t size, void* p) {          cout &lt;&lt; __FUNCTION__ &lt;&lt; endl;          return p;      }         void operator delete(void* ptr) {          cout &lt;&lt; __FUNCTION__ &lt;&lt; endl;          ::operator delete(ptr);      }     private:  };     void test4()  {      char* pChar = new char[sizeof(CTestUse4)];      CTestUse4* pCase = new (pChar) CTestUse4; //调用全局::new (pChar) CTestUse4，new (pChar) CTestUse4调用重载new      //delete pCase;      pCase-&gt;~CTestUse4();  }     int main(int argc, char *argv[])  {      test4();         return 0;  }</pre> </div> <p><strong>运行结果如下：</strong></p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220414/71a3c3f9c197c40116514acc35d935d2.jpg"></p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-110051.htm">取消动物防疫收费通知范文（取消动物防疫收费通知范文怎么写）</a></p>
+                                        <p>下一个：<a href="/news/article-110900.htm">青岛想念动物医院电话号码（青岛想念动物医院电话号码查询）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-102574.htm" title="宠物批发零售网站有哪些（宠物批发商）">宠物批发零售网站有哪些（宠物批发商）</a></li>
+                        <li class="py-2"><a href="/news/article-88498.htm" title="asyncio 系列、asyncio 的协程与任务">asyncio 系列、asyncio 的协程与任务</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-16-free-clash-verge-rev-node.htm" title="「4月16日」每日订阅更新，18.2M/S高速Clash/V2ray/SSR/Shadowrocket/Clash Verge免费节点链接分享">「4月16日」每日订阅更新，18.2M/S高速Clash/V2ray/SSR/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-110899.htm" title="分享C++三种类型new类型的运算符使用详情_C 语言_">分享C++三种类型new类型的运算符使用详情_C 语言_</a></li>
+                        <li class="py-2"><a href="/news/article-109179.htm" title="济南宠物狗领养中心电话号码（济南宠物狗领养中心电话号码是多少）">济南宠物狗领养中心电话号码（济南宠物狗领养中心电话号码是多少）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-22-free-high-speed-nodes.htm" title="「4月22日」每日订阅更新，18.5M/S高速V2ray/SSR/Shadowrocket/Clash/Clash Verge免费节点链接分享">「4月22日」每日订阅更新，18.5M/S高速V2ray/SSR/Shadowrocket/Clash/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-19-free-clash-verge-rev-node.htm" title="「4月19日」每日订阅更新，21.2M/S高速SSR/Clash/V2ray/Shadowrocket/Clash Verge免费节点链接分享">「4月19日」每日订阅更新，21.2M/S高速SSR/Clash/V2ray/Shadowrocket/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-95205.htm" title="被猫咬出血了一定要打针吗打几针疫苗（被猫咬出血需要打几针疫苗）">被猫咬出血了一定要打针吗打几针疫苗（被猫咬出血需要打几针疫苗）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-3-free-subscribe-node.htm" title="「4月3日」每日订阅更新，19.7M/S高速Shadowrocket/SSR/Clash/V2ray/Clash Verge免费节点链接分享">「4月3日」每日订阅更新，19.7M/S高速Shadowrocket/SSR/Clash/V2ray/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/news/article-87027.htm" title="动物医院的号码是多少（动物医院在哪）">动物医院的号码是多少（动物医院在哪）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about area end -->
+                <!-- footer area start -->
+        <footer id="apork-footer-area" class="apork-footer-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="footer-copyright text-center py-5">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Verge Github免费机场订阅节点官网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer area end -->
+        <!-- scrolltop button -->
+        <div class="material-scrolltop"></div>
+        <!-- js here -->
+        <script src="/assets/website/js/frontend/vergegithub/modernizr-3.5.0.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/jquery-1.12.4.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/popper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/bootstrap.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/swiper.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/meanmenu.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/magnific-popup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/owl.carousel.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/counterup.min.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/scrolltop.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/ajax-form.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/plugins.js"></script>
+        <script src="/assets/website/js/frontend/vergegithub/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </main>
+    <!-- main area end -->
+</body>
+
+</html>
