@@ -1,4 +1,4 @@
-# 「12月15日」每日订阅更新，19.1M/S高速Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Singbox节点/Clash Verge免费节点链接分享  更新时间 2025-12-15 08:40:31
+# 「12月22日」每日订阅更新，22M/S高速V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/Clash Verge免费节点链接分享  更新时间 2025-12-22 10:52:12
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vergegithub.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://vergegithub.github.io/uploads/2025/12/0-20251215.yaml
-- https://vergegithub.github.io/uploads/2025/12/1-20251215.yaml
-- https://vergegithub.github.io/uploads/2025/12/2-20251215.yaml
-- https://vergegithub.github.io/uploads/2025/12/3-20251215.yaml
-- https://vergegithub.github.io/uploads/2025/12/4-20251215.yaml
+- https://vergegithub.github.io/uploads/2025/12/0-20251222.yaml
+- https://vergegithub.github.io/uploads/2025/12/1-20251222.yaml
+- https://vergegithub.github.io/uploads/2025/12/2-20251222.yaml
+- https://vergegithub.github.io/uploads/2025/12/3-20251222.yaml
+- https://vergegithub.github.io/uploads/2025/12/4-20251222.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://vergegithub.github.io/uploads/2025/12/0-20251215.txt
-- https://vergegithub.github.io/uploads/2025/12/1-20251215.txt
-- https://vergegithub.github.io/uploads/2025/12/2-20251215.txt
-- https://vergegithub.github.io/uploads/2025/12/3-20251215.txt
-- https://vergegithub.github.io/uploads/2025/12/4-20251215.txt
+- https://vergegithub.github.io/uploads/2025/12/0-20251222.txt
+- https://vergegithub.github.io/uploads/2025/12/1-20251222.txt
+- https://vergegithub.github.io/uploads/2025/12/2-20251222.txt
+- https://vergegithub.github.io/uploads/2025/12/3-20251222.txt
+- https://vergegithub.github.io/uploads/2025/12/4-20251222.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://vergegithub.github.io/uploads/2025/12/20251215.json
+- https://vergegithub.github.io/uploads/2025/12/20251222.json
 
 ## 更多Clash节点订阅 ：
 
