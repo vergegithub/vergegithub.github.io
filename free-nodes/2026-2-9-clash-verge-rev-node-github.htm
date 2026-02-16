@@ -281,17 +281,13 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
         <p>上一个：<a href="/free-nodes/2026-2-8-clash-verge-rev-node.htm">「2月8日」每日订阅更新，19.1M/S高速V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/Clash Verge免费节点链接分享</a></p>
+        <p>下一个：<a href="/free-nodes/2026-2-10-node-share-links.htm">「2月10日」每日订阅更新，21.2M/S高速Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash Verge免费节点链接分享</a></p>
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 是否比 Clash 更省资源？</h5></div>
+    <div class="panel-heading"><h5>Trojan 是否需要证书？</h5></div>
     <div class="panel-body">
-        Sing-box 在性能优化上比 Clash 更出色。它采用 Go 语言重构核心模块，并对并发模型进行了优化，内存占用更低，启动速度更快，适合低配置设备或嵌入式环境。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的主要特性有哪些？</h5></div>
-    <div class="panel-body">
-        PassWall2 是基于 OpenWRT 的代理管理面板，支持多种协议（V2Ray、Trojan、Shadowsocks 等），拥有图形化界面和分流规则设置功能。它能帮助路由器实现全局代理和智能分流。<hr />    </div>
+        是的，Trojan 必须使用有效的 TLS 证书才能运行。推荐使用 Let's Encrypt 免费证书。若证书过期或配置错误，客户端将无法建立加密连接，导致无法访问外部网络。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 支持测速功能吗？</h5></div>
@@ -299,9 +295,9 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
         支持。WinXray 提供节点延迟测速功能，可检测每个节点的响应时间与可用性。测速结果能帮助用户选择最快线路，也能排除无效或不稳定的节点，提高整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的日志界面怎么看节点状态？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 的主要特性有哪些？</h5></div>
     <div class="panel-body">
-        Shadowrocket 的日志界面实时显示连接记录与节点响应延迟。绿色代表成功连接，红色代表失败，通过查看错误码可判断是 DNS 问题、TLS 握手失败还是代理超时。<hr />    </div>
+        PassWall2 是基于 OpenWRT 的代理管理面板，支持多种协议（V2Ray、Trojan、Shadowsocks 等），拥有图形化界面和分流规则设置功能。它能帮助路由器实现全局代理和智能分流。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 如何根据延迟自动切换节点？</h5></div>
@@ -309,14 +305,9 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
         PassWall2 会定期测试节点延迟，并结合策略组自动切换到延迟最低的节点。无需用户手动操作，即可保证网页、视频和游戏流量的高速稳定访问，提高整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 是否需要证书？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 的日志界面怎么看节点状态？</h5></div>
     <div class="panel-body">
-        是的，Trojan 必须使用有效的 TLS 证书才能运行。推荐使用 Let's Encrypt 免费证书。若证书过期或配置错误，客户端将无法建立加密连接，导致无法访问外部网络。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>QuantumultX 如何实现按端口和协议分流？</h5></div>
-    <div class="panel-body">
-        QuantumultX 支持按 TCP、UDP、端口及应用协议分流流量，结合策略组选择最优节点。这样可以为游戏、视频和广告屏蔽提供最佳网络体验，提高访问速度和稳定性。<hr />    </div>
+        Shadowrocket 的日志界面实时显示连接记录与节点响应延迟。绿色代表成功连接，红色代表失败，通过查看错误码可判断是 DNS 问题、TLS 握手失败还是代理超时。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 mKCP 参数如何调优以适应不稳定链路？</h5></div>
@@ -329,9 +320,19 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
         通过启用 TLS、Reality 或 WebSocket + CDN 转发，V2Ray 可有效隐藏真实服务器 IP。这样外部监测只能看到中转节点，从而提升匿名性与安全性。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>QuantumultX 如何实现按端口和协议分流？</h5></div>
+    <div class="panel-body">
+        QuantumultX 支持按 TCP、UDP、端口及应用协议分流流量，结合策略组选择最优节点。这样可以为游戏、视频和广告屏蔽提供最佳网络体验，提高访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 的 PAC 模式适合哪些使用场景？</h5></div>
     <div class="panel-body">
-        PAC 模式可根据规则文件动态判断流量是否走代理。适合访问国内外混合网站环境，无需手动切换节点，程序自动分流，提高网络访问效率和稳定性。    </div>
+        PAC 模式可根据规则文件动态判断流量是否走代理。适合访问国内外混合网站环境，无需手动切换节点，程序自动分流，提高网络访问效率和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Sing-box 是否比 Clash 更省资源？</h5></div>
+    <div class="panel-body">
+        Sing-box 在性能优化上比 Clash 更出色。它采用 Go 语言重构核心模块，并对并发模型进行了优化，内存占用更低，启动速度更快，适合低配置设备或嵌入式环境。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -360,16 +361,16 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-1-9-clash-verge-rev-node-share.htm" title="「1月9日」每日订阅更新，23M/S高速V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Clash Verge免费节点链接分享">「1月9日」每日订阅更新，23M/S高速V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Clash Verge免费节点链接分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-31-clash-verge-rev-windows.htm" title="「1月31日」每日订阅更新，22.3M/S高速Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/Clash Verge免费节点链接分享">「1月31日」每日订阅更新，22.3M/S高速Clash节点/V2ray节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点/Clash Verge免费节点链接分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-4-clash-verge-rev-node.htm" title="「2月4日」每日订阅更新，19.6M/S高速V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Clash Verge免费节点链接分享">「2月4日」每日订阅更新，19.6M/S高速V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Clash Verge免费节点链接分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-21-clash-verge-rev-node-github.htm" title="「1月21日」每日订阅更新，18.9M/S高速Shadowrocket节点/Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Clash Verge免费节点链接分享">「1月21日」每日订阅更新，18.9M/S高速Shadowrocket节点/Trojan节点/SSR节点/Singbox节点/Clash节点/V2ray节点/Clash Verge免费节点链接分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-11-free-node-subscribe-links.htm" title="「1月11日」每日订阅更新，18.9M/S高速Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Clash Verge免费节点链接分享">「1月11日」每日订阅更新，18.9M/S高速Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Clash Verge免费节点链接分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-20-clash-verge-rev-node-share.htm" title="「1月20日」每日订阅更新，20.9M/S高速Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/SSR节点/Clash Verge免费节点链接分享">「1月20日」每日订阅更新，20.9M/S高速Shadowrocket节点/V2ray节点/Singbox节点/Clash节点/Trojan节点/SSR节点/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-5-clash-verge-rev-node-github.htm" title="「2月5日」每日订阅更新，19.7M/S高速Trojan节点/Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Clash Verge免费节点链接分享">「2月5日」每日订阅更新，19.7M/S高速Trojan节点/Singbox节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-14-clash-verge-rev-github.htm" title="「2月14日」每日订阅更新，19.8M/S高速SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点/Clash Verge免费节点链接分享">「2月14日」每日订阅更新，19.8M/S高速SSR节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点/Trojan节点/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-17-latest-clash-verge-rev-node.htm" title="「1月17日」每日订阅更新，19.2M/S高速Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash Verge免费节点链接分享">「1月17日」每日订阅更新，19.2M/S高速Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-3-clash-verge-rev-windows.htm" title="「2月3日」每日订阅更新，18M/S高速SSR节点/Singbox节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/Clash Verge免费节点链接分享">「2月3日」每日订阅更新，18M/S高速SSR节点/Singbox节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-28-clash-verge-rev-node-github.htm" title="「1月28日」每日订阅更新，22.2M/S高速V2ray节点/Clash节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash Verge免费节点链接分享">「1月28日」每日订阅更新，22.2M/S高速V2ray节点/Clash节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-22-node-share-links.htm" title="「1月22日」每日订阅更新，18M/S高速V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/Clash Verge免费节点链接分享">「1月22日」每日订阅更新，18M/S高速V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点/Clash Verge免费节点链接分享</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-1-27-clash-verge-rev-nodes.htm" title="「1月27日」每日订阅更新，21.8M/S高速SSR节点/Singbox节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/Clash Verge免费节点链接分享">「1月27日」每日订阅更新，21.8M/S高速SSR节点/Singbox节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/Clash Verge免费节点链接分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-1-23-node-share-links.htm" title="「1月23日」每日订阅更新，19.2M/S高速SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/Clash Verge免费节点链接分享">「1月23日」每日订阅更新，19.2M/S高速SSR节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点/Singbox节点/Clash Verge免费节点链接分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-9-clash-verge-rev-node-github.htm" title="「2月9日」每日订阅更新，22.9M/S高速Singbox节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash Verge免费节点链接分享">「2月9日」每日订阅更新，22.9M/S高速Singbox节点/Clash节点/SSR节点/Trojan节点/Shadowrocket节点/V2ray节点/Clash Verge免费节点链接分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-2-8-clash-verge-rev-node.htm" title="「2月8日」每日订阅更新，19.1M/S高速V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/Clash Verge免费节点链接分享">「2月8日」每日订阅更新，19.1M/S高速V2ray节点/Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-13-latest-clash-verge-rev-node.htm" title="「2月13日」每日订阅更新，21.2M/S高速Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点/Clash Verge免费节点链接分享">「2月13日」每日订阅更新，21.2M/S高速Singbox节点/Shadowrocket节点/Trojan节点/SSR节点/V2ray节点/Clash节点/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-10-node-share-links.htm" title="「2月10日」每日订阅更新，21.2M/S高速Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash Verge免费节点链接分享">「2月10日」每日订阅更新，21.2M/S高速Shadowrocket节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash Verge免费节点链接分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-2-4-clash-verge-rev-node.htm" title="「2月4日」每日订阅更新，19.6M/S高速V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Clash Verge免费节点链接分享">「2月4日」每日订阅更新，19.6M/S高速V2ray节点/Trojan节点/Singbox节点/Clash节点/SSR节点/Shadowrocket节点/Clash Verge免费节点链接分享</a></li>
                     </ul>
     </div>
 </div>
@@ -381,10 +382,10 @@ systemctl </span><span><span class="hljs-built_in">enable</span></span><span> v2
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
+                <h4><span class="badge" style="float: right;">16</span> <a href="/date/2026-02/" title="2026-02 归档">2026-02</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                     </ul>
     </div>
