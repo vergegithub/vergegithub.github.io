@@ -381,9 +381,9 @@ A4：通常通过社交平台、论坛或服务商获取。公共节点风险较
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的延迟检测如何帮助节点选择？</h5></div>
+    <div class="panel-heading"><h5>VMess AEAD 加密能防止哪些风险？</h5></div>
     <div class="panel-body">
-        Clash 会定期测速节点延迟，并根据策略组自动选择延迟最低节点处理流量。可避免访问高延迟或失效节点，提高网页、视频和游戏访问速度及稳定性。<hr />    </div>
+        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 是否支持 Clash 配置？</h5></div>
@@ -391,9 +391,14 @@ A4：通常通过社交平台、论坛或服务商获取。公共节点风险较
         Surfboard 是一款支持多种协议的客户端应用，它能够兼容 Clash 的配置文件格式，用户只需导入 YAML 文件即可。该应用以轻量、高速著称，常用于 iOS 和 macOS 系统。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Nekoray 节点订阅自动更新如何实现？</h5></div>
+    <div class="panel-heading"><h5>Netch 是否支持系统代理？</h5></div>
     <div class="panel-body">
-        用户添加订阅 URL 后，Nekoray 会定期下载最新节点列表并替换旧节点。保持节点列表最新可减少手动维护，保证节点可用性和网络连接稳定性，提升使用体验。<hr />    </div>
+        Netch 不直接修改系统代理，而是通过虚拟网卡（TAP 驱动）实现透明代理。这种方式不会影响浏览器设置，适合游戏和应用程序需要 UDP 支持的场景。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 的延迟检测如何帮助节点选择？</h5></div>
+    <div class="panel-body">
+        Clash 会定期测速节点延迟，并根据策略组自动选择延迟最低节点处理流量。可避免访问高延迟或失效节点，提高网页、视频和游戏访问速度及稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 如何按端口匹配流量分配节点？</h5></div>
@@ -401,24 +406,9 @@ A4：通常通过社交平台、论坛或服务商获取。公共节点风险较
         Sing-box 支持按端口匹配流量，将不同应用的流量分配到指定节点。结合策略组使用，可实现精准分流，优化访问速度和网络稳定性，提高整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Netch 是否支持系统代理？</h5></div>
-    <div class="panel-body">
-        Netch 不直接修改系统代理，而是通过虚拟网卡（TAP 驱动）实现透明代理。这种方式不会影响浏览器设置，适合游戏和应用程序需要 UDP 支持的场景。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 如何选择合适混淆提高稳定性？</h5></div>
-    <div class="panel-body">
-        选择混淆方式时应根据网络环境和封锁程度，例如 tls1.2_ticket_auth 可模拟 HTTPS 流量。合理组合协议和混淆可提升节点稳定性和抗封锁能力，确保长期科学上网体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>V2Ray 的 TLS 配置如何增强抗封锁能力？</h5></div>
     <div class="panel-body">
         TLS 配置可将流量伪装成正常 HTTPS 请求，隐藏真实数据特征。结合域名伪装、WebSocket 或 QUIC 等传输方式，可有效绕过封锁，提高节点长期可用性和连接稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密能防止哪些风险？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下使用，有助于保持节点长期可用，保证数据安全和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 还能在现代网络环境下正常使用吗？</h5></div>
@@ -428,7 +418,17 @@ A4：通常通过社交平台、论坛或服务商获取。公共节点风险较
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 的日志功能如何调试连接问题？</h5></div>
     <div class="panel-body">
-        Mihomo 日志可显示节点连接、请求延迟和错误信息。通过分析日志，可以判断节点是否不可达、TLS 握手失败或规则匹配异常，从而快速定位问题并解决。    </div>
+        Mihomo 日志可显示节点连接、请求延迟和错误信息。通过分析日志，可以判断节点是否不可达、TLS 握手失败或规则匹配异常，从而快速定位问题并解决。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 如何选择合适混淆提高稳定性？</h5></div>
+    <div class="panel-body">
+        选择混淆方式时应根据网络环境和封锁程度，例如 tls1.2_ticket_auth 可模拟 HTTPS 流量。合理组合协议和混淆可提升节点稳定性和抗封锁能力，确保长期科学上网体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Nekoray 节点订阅自动更新如何实现？</h5></div>
+    <div class="panel-body">
+        用户添加订阅 URL 后，Nekoray 会定期下载最新节点列表并替换旧节点。保持节点列表最新可减少手动维护，保证节点可用性和网络连接稳定性，提升使用体验。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -476,16 +476,16 @@ A4：通常通过社交平台、论坛或服务商获取。公共节点风险较
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-8-7.htm" title="「8月7日」每日订阅更新，21.1M/S高速Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Clash Verge免费节点链接分享">「8月7日」每日订阅更新，21.1M/S高速Trojan节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/SSR节点/Clash Verge免费节点链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/today-clash-verge-rev-node-2026-9-5.htm" title="「9月5日」每日订阅更新，20.4M/S高速SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/Clash Verge免费节点链接分享">「9月5日」每日订阅更新，20.4M/S高速SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/Clash Verge免费节点链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-28-node-share.htm" title="「9月28日」每日订阅更新，18.1M/S高速Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Clash Verge免费节点链接分享">「9月28日」每日订阅更新，18.1M/S高速Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点/Clash Verge免费节点链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-30-free-subscribe-node.htm" title="「9月30日」每日订阅更新，19.9M/S高速V2ray节点/Singbox节点/Trojan节点/Clash节点/SSR节点/Shadowrocket节点/Clash Verge免费节点链接分享">「9月30日」每日订阅更新，19.9M/S高速V2ray节点/Singbox节点/Trojan节点/Clash节点/SSR节点/Shadowrocket节点/Clash Verge免费节点链接分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-16-clash-verge-rev-node-share.htm" title="「9月16日」每日订阅更新，22.1M/S高速Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点/Clash Verge免费节点链接分享">「9月16日」每日订阅更新，22.1M/S高速Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点/Singbox节点/Clash Verge免费节点链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-24-clash-verge-rev-nodes.htm" title="「9月24日」每日订阅更新，18.3M/S高速Clash节点/SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash Verge免费节点链接分享">「9月24日」每日订阅更新，18.3M/S高速Clash节点/SSR节点/Trojan节点/V2ray节点/Shadowrocket节点/Singbox节点/Clash Verge免费节点链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-16-free-node-subscribe.htm" title="「8月16日」每日订阅更新，22.1M/S高速Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Clash Verge免费节点链接分享">「8月16日」每日订阅更新，22.1M/S高速Singbox节点/Trojan节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Clash Verge免费节点链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-27.htm" title="「9月27日」每日订阅更新，21.2M/S高速Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash Verge免费节点链接分享">「9月27日」每日订阅更新，21.2M/S高速Trojan节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Singbox节点/Clash Verge免费节点链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-free-subscribe-node.htm" title="「9月4日」每日订阅更新，18.8M/S高速Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash Verge免费节点链接分享">「9月4日」每日订阅更新，18.8M/S高速Shadowrocket节点/Clash节点/SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash Verge免费节点链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-22-latest-clash-verge-rev-node.htm" title="「9月22日」每日订阅更新，21M/S高速Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash Verge免费节点链接分享">「9月22日」每日订阅更新，21M/S高速Clash节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Trojan节点/Clash Verge免费节点链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-4-node-share.htm" title="「10月4日」每日订阅更新，19.6M/S高速Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Clash Verge免费节点链接分享">「10月4日」每日订阅更新，19.6M/S高速Singbox节点/SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Clash Verge免费节点链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/today-clash-verge-rev-node-2026-9-19.htm" title="「9月19日」每日订阅更新，20.3M/S高速Trojan节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Clash Verge免费节点链接分享">「9月19日」每日订阅更新，20.3M/S高速Trojan节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Clash Verge免费节点链接分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-3.htm" title="「9月3日」每日订阅更新，18.1M/S高速Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Clash Verge免费节点链接分享">「9月3日」每日订阅更新，18.1M/S高速Shadowrocket节点/Trojan节点/V2ray节点/SSR节点/Singbox节点/Clash节点/Clash Verge免费节点链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-14-clash-verge-rev-node-github.htm" title="「8月14日」每日订阅更新，20M/S高速Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Clash Verge免费节点链接分享">「8月14日」每日订阅更新，20M/S高速Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点/Clash Verge免费节点链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-8-23.htm" title="「8月23日」每日订阅更新，18.2M/S高速Trojan节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Clash Verge免费节点链接分享">「8月23日」每日订阅更新，18.2M/S高速Trojan节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Singbox节点/Clash Verge免费节点链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-9.htm" title="「8月9日」每日订阅更新，22.1M/S高速V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/Clash Verge免费节点链接分享">「8月9日」每日订阅更新，22.1M/S高速V2ray节点/Trojan节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点/Clash Verge免费节点链接分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/today-clash-verge-rev-node-2026-9-17.htm" title="「9月17日」每日订阅更新，22.9M/S高速Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/Clash Verge免费节点链接分享">「9月17日」每日订阅更新，22.9M/S高速Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点/Clash Verge免费节点链接分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-2-clash-verge-rev-nodes.htm" title="「10月2日」每日订阅更新，21M/S高速Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Clash节点/Clash Verge免费节点链接分享">「10月2日」每日订阅更新，21M/S高速Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Clash节点/Clash Verge免费节点链接分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -497,10 +497,10 @@ A4：通常通过社交平台、论坛或服务商获取。公共节点风险较
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                     </ul>
     </div>
